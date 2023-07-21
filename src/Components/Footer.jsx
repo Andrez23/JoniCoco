@@ -8,6 +8,7 @@ import Logo from "../images/Logo Jonicoco.png";
 
 const Footer = () => {
   return (
+    <DIV>
     <Card style={{ width: '18rem' }}>
     <Card.Img variant="top" src={Logo} />
     <Card.Body>
@@ -27,7 +28,8 @@ const Footer = () => {
       <Card.Link href="#">Another Link</Card.Link>
     </Card.Body>
   </Card>
-
+  <H1> PARA PUBLICAR EN EL GIT - PUSH DE PRUEBA </H1>
+  </DIV>
   )
 }
 
