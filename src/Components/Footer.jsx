@@ -1,35 +1,76 @@
 import React from 'react'
-import Card from 'react-bootstrap/Card';
-import ListGroup from 'react-bootstrap/ListGroup';
-import Logo from "../images/Logo Jonicoco.png";
-
-
+import { Link } from 'react-router-dom';
+import '../estilos_jonicoco.css';
 
 
 const Footer = () => {
-  return (
-    
-    <Card style={{ width: '18rem' }}>
-    <Card.Img variant="top" src={Logo} />
-    <Card.Body>
-      <Card.Title>hola mor</Card.Title>
-      <Card.Text>
-        Some quick example text to build on the card title and make up the
-        bulk of the card's content.
-      </Card.Text>
-    </Card.Body>
-    <ListGroup className="list-group-flush">
-      <ListGroup.Item>Cras justo odio</ListGroup.Item>
-      <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-      <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-    </ListGroup>
-    <Card.Body>
-      <Card.Link href="#">Card Link</Card.Link>
-      <Card.Link href="#">Another Link</Card.Link>
-    </Card.Body>
-  </Card>
- 
-  )
+    return (
+        <div>
+            <body className='color_jonicoco'>
+                <footer className="text-white">
+                    <div className="container py-4 py-lg-5 ">
+                        <div className="row">
+                            <div className="col-sm-6 col-md-4 item">
+                                <h3 className="footer-links-title">Servicios</h3>
+                                <hr />
+                                <ul className="footer-links">
+                                    <li><Link className="link-light" href="/about">What is HomieTouch</Link></li>
+                                    <li><Link className="link-light" href="/#team">Our Team</Link></li>
+                                    <li><Link className="link-light" href="/contact">Contact</Link></li>
+                                    <li><Link className="link-light" href="/terms-privacy">Terms & Conditions</Link></li>
+                                    <li><Link className="link-light" href="/terms-privacy">Privacy Policy</Link></li>
+                                </ul>
+                            </div>
+                            <div className="col-sm-6 col-md-4 item">
+                                <h3><strong>Destinos</strong></h3>
+                                <hr />
+                                <ul className="footer-links">
+                                    <li><Link className="link-light">Banglore</Link></li>
+                                </ul>
+                                
+                                <Link to="/destinos" className="text-decoration-none text-white ">Ver más destinos</Link>
+
+
+
+
+                            </div>
+                            <div className="col-sm-6 col-md-4 item">
+                                <h3><strong>Contactanos</strong></h3>
+                                <hr />
+                                <ul className="footer-links">
+                                    <li><Link className="link-light"><i class="fa-solid fa-phone me-2"></i>+57 304 3635185</Link></li>
+                                    <li><Link className="link-light"><i class="fa-solid fa-envelope me-2"></i>jukumaritravels@gmail.com</Link></li>
+                                    <br />
+                                    <br />
+                                </ul>
+                            </div>
+                        </div>
+                        <hr />
+                        <div className="d-flex justify-content-between align-items-center pt-3">
+                            <div className="container text-white py-4 py-lg-5">
+                                <ul className="list-inline">
+                                    <li className="list-inline-item me-4"><Link className="link-light" href="#">Una experiencia para vivir y nunca olvidar</Link></li>
+                                </ul>
+                                <ul className="list-inline">
+                                    <li className="list-inline-item me-4">
+                                        <Link to="https://www.facebook.com/profile.php?id=100085310961891&mibextid=ZbWKwL" className="link-light"><i className="fa-brands fa-facebook fa-2xl"></i></Link>
+                                    </li>
+                                    
+                                    <li className="list-inline-item me-4">
+                                        <Link to="https://instagram.com/jukumaritravels?igshid=MzNlNGNkZWQ4Mg==" className="link-light"><i className="fa-brands fa-instagram fa-2xl"></i></Link>
+                                    </li>
+                                    <li className="list-inline-item">
+                                        <Link to="https://www.tiktok.com/@jukumaritravels?_t=8dE4dmsl39a&_r=1" className="link-light"><i className="fa-brands fa-tiktok fa-2xl"></i></Link>
+                                    </li>
+                                </ul>
+                                <p className="copyright">Jonicoco © 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </body>
+        </div >
+    )
 }
 
 export default Footer

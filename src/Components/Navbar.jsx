@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "../images/Logo Jonicoco.png";
+import Logo from "../images/logo.png";
+import '../estilos_jonicoco.css';
+
 
 
 
@@ -8,11 +10,17 @@ const Navbar = () => {
   return (
     //Inicio Navbar
     <div>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">   
-        <div className="container-fluid">
-          <Link className="navbar-brand" >
+
+      <div className=" color_jonicoco">
+      <Link class Name="navbar-brand" >
             <img src={Logo} className="w-25 p-3 h-50" alt="..." />
           </Link>
+      </div>
+      <div>
+
+      
+      <nav className="navbar navbar-expand-lg bg-body-tertiary">   
+        <div className="container-fluid">
           <button
             className="navbar-toggler"
             type="button"
@@ -27,7 +35,7 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link to='home' className="nav-link active" aria-current="page" >
+                <Link to='/' className="nav-link active" aria-current="page" >
                   Inicio
                 </Link>
               </li>
@@ -50,6 +58,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
+      </div>
     </div>
     //Final Navbar
   );
