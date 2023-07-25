@@ -5,7 +5,6 @@ import '../estilos_jonicoco.css';
 
 
 
-
 const Navbar = () => {
   return (
     //Inicio Navbar
@@ -32,25 +31,25 @@ const Navbar = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <div className="collapse navbar-collapse" id="navbarSupportedContent" >
+            <ul className="navbar-nav mx-auto mb-2 mb-lg-2 ">
               <li className="nav-item">
-                <Link to='/' className="nav-link active" aria-current="page" >
+                <Link to='/' className="nav-link active px-5" aria-current="page" >
                   Inicio
                 </Link>
               </li>
               <li  className="nav-item">
-                <Link to="nosotros" className="nav-link active" aria-current="page" >
+                <Link to="nosotros" className="nav-link active px-5" aria-current="page" >
                   Nosotros
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="resena" className="nav-link active" aria-current="page" >
+                <Link to="resena" className="nav-link active px-5" aria-current="page" >
                   Reseña
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="contactenos" className="nav-link active" aria-current="page" >
+                <Link to="contactenos" className="nav-link active px-5" aria-current="page" >
                   Contactenos
                 </Link>
               </li>
