@@ -34,12 +34,12 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mx-auto ">
               <li className="nav-item">
-                <Link to='/' className="nav-link active" aria-current="page" >
+                <Link to='/' className="nav-link active px-5" aria-current="page" >
                   Inicio
                 </Link>
               </li>
               <li  className="nav-item">
-                <Link to="nosotros" className="nav-link active" aria-current="page" >
+                <Link to="nosotros" className="nav-link active px-5" aria-current="page" >
                   Nosotros
                 </Link>
               </li>
