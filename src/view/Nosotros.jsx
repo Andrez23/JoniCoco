@@ -6,31 +6,35 @@ import Jonicoco3 from "../images/Jonicoco5.jpeg";
 const Nosotros = () => {
   return (
     <div class="card-group">
-  <div class="card">
+  <div class="card border-danger">
     <img src={Jonicoco1} class="card-img-top" alt="..."/>
     <div class="card-body">
-      <h5 class="card-title">Título de la tarjeta</h5>
-      <p class="card-text">Esta es una tarjeta más amplia con texto de apoyo a continuación como introducción natural a contenido adicional. Este contenido es un poco más largo.</p>
-      <p class="card-text"><small class="text-muted">Última actualización hace 3 minutos</small></p>
+      <h5 class="card-title text-danger">Artesanias realizadas en coco</h5>
+      <p class="card-text">Con el producto restante tal como la cascara del coco, realizamos artesanias de excelente calidad asi dandole un buen uso a todo nuestro material primario.</p>
+      <p class="card-text"><small class="text-muted"></small></p>
     </div>
   </div>
-  <div class="card">
+  <div class="card  border-danger">
     <img src={Jonicoco2} class="card-img-top" alt="..."/>
     <div class="card-body">
-      <h5 class="card-title">Título de la tarjeta</h5>
-      <p class="card-text">Esta tarjeta tiene texto de apoyo a continuación como una introducción natural a contenido adicional.</p>
-      <p class="card-text"><small class="text-muted">Última actualización hace 3 minutos</small></p>
+      <h5 class="card-title text-danger">Ingredientes de alta calidad</h5>
+      <p class="card-text">Jonicoco pretende Fabricar una excelente mezcla natural de panela y coco, para obtener un producto de alta calidad, buen precio y sabor. </p>
+      <p class="card-text"><small class="text-muted"></small></p>
     </div>
   </div>
-  <div class="card">
+  <div class="card border-danger">
     <img src={Jonicoco3} class="card-img-top " alt="..."/>
     <div class="card-body">
-      <h5 class="card-title">Título de la tarjeta</h5>
-      <p class="card-text">Esta es una tarjeta más amplia con texto de apoyo a continuación como introducción natural a contenido adicional. Esta tarjeta tiene un contenido aún más largo que la primera para mostrar esa acción de igual altura.</p>
-      <p class="card-text"><small class="text-muted">Última actualización hace 3 minutos</small></p>
+      <h5 class="card-title text-danger">Entrando en el comercio local</h5>
+      <p class="card-text">Acompañar las panelitas con una deliciosa mazamorra pilada y prestar un excelente servicio en el local comercial.</p>
+      <p class="card-text"><small class="text-muted"></small></p>
     </div>
   </div>
+  <div>
+    
+  </div>
 </div>
+
   )
 }
 
