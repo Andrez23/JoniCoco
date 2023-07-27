@@ -1,94 +1,176 @@
 import React from "react";
-import Jonicoco1 from "../images/Jonicoco2.jpeg";
-import Jonicoco2 from "../images/Jonicoco3.jpeg";
-import Jonicoco3 from "../images/Jonicoco4.jpeg";
+import EditJoniCoco3 from "../images/EditJoniCoco3 - banner.png";
+import Jonicoco2 from "../images/Jonicoco2.jpeg";
+import videoCoco from "../images/videoCoco.mp4";
+import "../view/EstilosHome.css";
+import MapContainer from "../view/MapContainer";
 
 const Home = () => {
-  /* Inicio carrousel*/
   return (
     <div>
-      <div id="carouselExampleCaptions" className="carousel slide">
-        <div className="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="0"
-            className="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-        </div>
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img src={Jonicoco1} className="d-block w-100" alt="..." />
-            <div className="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
-              <p>
-                Some representative placeholder content for the first slide.
-              </p>
-            </div>
-          </div>
-          <div className="carousel-item">
-            <img src={Jonicoco2} className="d-block w-100" alt="..." />
-            <div className="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>
-                Some representative placeholder content for the second slide.
-              </p>
-            </div>
-          </div>
-          <div className="carousel-item">
-            <img src={Jonicoco3} className="d-block w-100" alt="..." />
-            <div className="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>
-                Some representative placeholder content for the third slide.
-              </p>
-            </div>
-          </div>
-        </div>
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="prev"
-        >
-          <span
-            className="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="next"
-        >
-          <span
-            className="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Next</span>
-        </button>
+      <div className="d-flex">
+        <img src={EditJoniCoco3} className="d-block w-100 cover" alt="..." />
       </div>
-      {/*Final final carrousel*/}
-
-     
+      {/*inicio primera columna */}
+      <div className="mt-5 fonduco" >
+        <h1>Algunos productos</h1>
+        <div className="container" style={{ marginTop: "3%" }}>
+          <div className="row">
+            <div className="col-md-12 col-lg-6">
+              <div className="container">
+                <img src={Jonicoco2} style={{ width: "75%" }} alt="" />
+              </div>
+            </div>
+            <div className="col-md-12 col-lg-6">
+              <div className="container" style={{ marginTop: "7%" }}>
+                <div className="base_header">
+                  <span>
+                    <small className="bor_header_left"></small>Elije tus
+                    VACACIONES<small className="bor_header_right"></small>
+                  </span>
+                  <h3>Nosotros las hacemos realidad.</h3>
+                </div>
+                <div className="base_footer">
+                  <p>
+                    Si estás pensando en viajar, planea tus vacaciones con
+                    Jukumari Travels y no dejes de vivir una experiencia
+                    inolvidable al lado de tu pareja, amigos, o familiares.{" "}
+                    <br />
+                    <br />
+                    Deja todo en nuestras manos y dedícate a disfrutar y a que
+                    te atiendan como te lo mereces.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        {/*Final primera columna */}
+        {/*Inicio segunda columna */}
+        <div className="container" style={{ marginTop: "3%" }}>
+          <div className="row">
+            <div className="col-md-12 col-lg-6">
+              <div className="container" style={{ marginTop: "7%" }}>
+                <div className="base_header">
+                  <span>
+                    <small className="bor_header_left"></small>Elije tus
+                    VACACIONES<small className="bor_header_right"></small>
+                  </span>
+                  <h3>Nosotros las hacemos realidad.</h3>
+                </div>
+                <div className="base_footer">
+                  <p>
+                    Si estás pensando en viajar, planea tus vacaciones con
+                    Jukumari Travels y no dejes de vivir una experiencia
+                    inolvidable al lado de tu pareja, amigos, o familiares.{" "}
+                    <br />
+                    <br />
+                    Deja todo en nuestras manos y dedícate a disfrutar y a que
+                    te atiendan como te lo mereces.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-12 col-lg-6">
+              <div className="container">
+                <img src={Jonicoco2} style={{ width: "75%" }} alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        {/*Final segunda columna */}
+        {/*Inicio tercera columna */}
+        <div className="container" style={{ marginTop: "3%" }}>
+          <div className="row">
+            <div className="col-md-12 col-lg-6">
+              <div className="container">
+                <img src={Jonicoco2} style={{ width: "75%" }} alt="" />
+              </div>
+            </div>
+            <div className="col-md-12 col-lg-6">
+              <div className="container" style={{ marginTop: "7%" }}>
+                <div className="base_header">
+                  <span>
+                    <small className="bor_header_left"></small>Elije tus
+                    VACACIONES<small className="bor_header_right"></small>
+                  </span>
+                  <h3>Nosotros las hacemos realidad.</h3>
+                </div>
+                <div className="base_footer">
+                  <p>
+                    Si estás pensando en viajar, planea tus vacaciones con
+                    Jukumari Travels y no dejes de vivir una experiencia
+                    inolvidable al lado de tu pareja, amigos, o familiares.{" "}
+                    <br />
+                    <br />
+                    Deja todo en nuestras manos y dedícate a disfrutar y a que
+                    te atiendan como te lo mereces.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        {/*Final tercera columna */}
+        {/*Inicio Conocenos */}
+      <div>
+        <div className="mt-5">
+          <h1>Conocenos</h1>
+          <div className="col-md-12 col-lg-12">
+                <div className="container" style={{ padding: '0%' }}>
+                  <div className="embed-responsive embed-responsive-16by9">
+                    <video controls width="100%" height="100%" className='border border-3 rounded-top '>
+                      <source src={videoCoco} type="video/mp4" />
+                      Tu navegador no soporta el elemento de video.
+                    </video>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+        {/*Final conocenos */}
+        {/*Inicio Ubicacion */}
+      <div>
+        <div className="mt-5 mb-5">
+          <h1>Ubicacion</h1>
+          <div className="container" style={{ marginTop: "3%" }}>
+            <div className="row">
+              <div className="col-md-12 col-lg-8">
+                <div className="container">
+                  <MapContainer />
+                </div>
+              </div>
+              <div className="col-md- col-lg-4">
+                <div className="container" style={{ marginTop: "40%" }}>
+                  <div className="base_header">
+                    <span>
+                      <small className="bor_header_left"></small>Local Físico
+                      <small className="bor_header_right"></small>
+                    </span>
+                    <h3>Dónde nos Ubicamos.</h3>
+                  </div>
+                  <div className="base_footer">
+                    <p>
+                      <strong>Atención de Calidad</strong>
+                      <br />
+                      Estamos ubicados en el Centro comercial
+                      <h3>Plaza Real</h3>
+                      Segundo piso <h3>L-205</h3>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/*Final Ubicación */}
+      </div>
     </div>
-    
   );
 };
 

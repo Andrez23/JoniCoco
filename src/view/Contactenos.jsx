@@ -2,7 +2,7 @@ import React from "react";
 
 const Contactenos = () => {
   return (
- <div>
+ <div className="mt-5">
     <section className="d-flex justify-content-center py-5">
       <div className="card col-sm-6 p-3"> 
         <div className="mb-3">

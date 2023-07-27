@@ -31,7 +31,7 @@ const Footer = () => {
                             </div>
                         </div>
                         <hr />
-                        <div className="d-flex justify-content-between align-items-center pt-3">
+                        <div className="d-flex justify-content-between align-items-center pt-2">
                             <div className="container text-white py-4 py-lg-0">
                                 <ul className="list-inline">
                                     <li className="list-inline-item me-6"><Link className="link-light text-decoration-none" href="#">La receta de la abuela</Link></li>
