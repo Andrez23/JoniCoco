@@ -34,14 +34,23 @@ const Footer = () => {
                         <div className="d-flex justify-content-between align-items-center pt-2">
                             <div className="container text-white py-4 py-lg-0">
                                 <ul className="list-inline">
-                                    <li className="list-inline-item me-6"><Link className="link-light text-decoration-none" href="#">La receta de la abuela</Link></li>
+                                    <li className="list-inline-item me-6 mt-2" ><Link className="link-light text-decoration-none" href="#">La receta de la abuela</Link></li>
                                 </ul>
                                 <ul className="list-inline"> 
                                     <li className="list-inline-item me-6">
                                         <Link to="https://www.instagram.com/panelitas.joni.coco/" className="link-light"><i className="fa-brands fa-instagram fa-2xl"></i></Link>
                                     </li>
+                                    <li className="list-inline-item me-6">
+                                        <Link to="https://www.instagram.com/panelitas.joni.coco/" className="link-light"><i className="fa-brands fa-facebook fa-2xl"></i></Link>
+                                    </li>
+                                    <li className="list-inline-item me-6">
+                                        <Link to="https://www.instagram.com/panelitas.joni.coco/" className="link-light"><i className="fa-brands fa-telegram fa-2xl"></i></Link>
+                                    </li>
+                                    <li className="list-inline-item me-6">
+                                        <Link to="https://www.instagram.com/panelitas.joni.coco/" className="link-light"><i className="fa-brands fa-tiktok fa-2xl"></i></Link>
+                                    </li>
                                 </ul>
-                                <p className="copyright ">Jonicoco © 2023</p>
+                                <p className="copyright mb-0">Jonicoco © 2023</p>
                             </div>
                         </div>
                     </div>

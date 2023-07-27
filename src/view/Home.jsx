@@ -7,12 +7,12 @@ import MapContainer from "../view/MapContainer";
 
 const Home = () => {
   return (
-    <div>
-      <div className="d-flex">
+    <div className="mb-5">
+      <header className="img-fluid">
         <img src={EditJoniCoco3} className="d-block w-100 cover" alt="..." />
-      </div>
+      </header>
       {/*inicio primera columna */}
-      <div className="mt-5 fonduco" >
+      <div className="mt-5 fonduco">
         <h1>Algunos productos</h1>
         <div className="container" style={{ marginTop: "3%" }}>
           <div className="row">
@@ -45,8 +45,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div>
+
         {/*Final primera columna */}
         {/*Inicio segunda columna */}
         <div className="container" style={{ marginTop: "3%" }}>
@@ -80,19 +79,18 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div>
+
         {/*Final segunda columna */}
         {/*Inicio tercera columna */}
         <div className="container" style={{ marginTop: "3%" }}>
           <div className="row">
-            <div className="col-md-12 col-lg-6">
+            <div className="col-md-8 col-lg-6 joni2 border rounded-end-5 ">
               <div className="container">
-                <img src={Jonicoco2} style={{ width: "75%" }} alt="" />
+                <img src={Jonicoco2} style={{ width: "100%" }} alt="" />
               </div>
             </div>
             <div className="col-md-12 col-lg-6">
-              <div className="container" style={{ marginTop: "7%" }}>
+              <div className="container" style={{ marginTop: "2%" }}>
                 <div className="base_header">
                   <span>
                     <small className="bor_header_left"></small>Elije tus
@@ -100,7 +98,7 @@ const Home = () => {
                   </span>
                   <h3>Nosotros las hacemos realidad.</h3>
                 </div>
-                <div className="base_footer">
+                <div className="base_footer" >
                   <p>
                     Si estás pensando en viajar, planea tus vacaciones con
                     Jukumari Travels y no dejes de vivir una experiencia
@@ -116,25 +114,30 @@ const Home = () => {
           </div>
         </div>
       </div>
-        {/*Final tercera columna */}
-        {/*Inicio Conocenos */}
+      {/*Final tercera columna */}
+      {/*Inicio Conocenos */}
       <div>
         <div className="mt-5">
           <h1>Conocenos</h1>
           <div className="col-md-12 col-lg-12">
-                <div className="container" style={{ padding: '0%' }}>
-                  <div className="embed-responsive embed-responsive-16by9">
-                    <video controls width="100%" height="100%" className='border border-3 rounded-top '>
-                      <source src={videoCoco} type="video/mp4" />
-                      Tu navegador no soporta el elemento de video.
-                    </video>
-                  </div>
-                </div>
+            <div className="container" style={{ padding: "0%" }}>
+              <div className="embed-responsive embed-responsive-16by9">
+                <video
+                  controls
+                  width="100%"
+                  height="100%"
+                  className="border border-3 rounded-top "
+                >
+                  <source src={videoCoco} type="video/mp4" />
+                  Tu navegador no soporta el elemento de video.
+                </video>
               </div>
+            </div>
+          </div>
         </div>
       </div>
-        {/*Final conocenos */}
-        {/*Inicio Ubicacion */}
+      {/*Final conocenos */}
+      {/*Inicio Ubicacion */}
       <div>
         <div className="mt-5 mb-5">
           <h1>Ubicacion</h1>
