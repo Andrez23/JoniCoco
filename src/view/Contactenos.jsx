@@ -3,7 +3,7 @@ import "../view/EstilosContactanos.css"
 
 const Contactenos = () => {
   return (
- <div className="mt-5 fondo">
+ <div className="mt-0 fondo">
     <section className="d-flex justify-content-center py-5">
       <div className="card col-sm-6 p-3"> 
         <div className="mb-3">
