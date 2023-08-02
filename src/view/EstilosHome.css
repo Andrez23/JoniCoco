@@ -3,8 +3,8 @@
 }
 
 .fonduco{
-    background: rgb(172,2,2);
-    background: linear-gradient(145deg, rgba(172,2,2,0.9192051820728291) 47%, rgba(207,83,0,0.7903536414565826) 58%);
+    background: #911625
+  
 }
 
 .titulo{ /*fuente para el titulo*/
@@ -62,4 +62,8 @@
 .video{
     border-radius: 30px;
     box-shadow: 5px 5px 15px rgba(3, 32, 51, .8);
+}
+
+.parraf{
+  font-size: 20px;
 }

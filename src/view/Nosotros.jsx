@@ -2,14 +2,78 @@ import React from 'react'
 import Jonicoco1 from "../images/Jonicoco1.jpeg";
 import Jonicoco2 from "../images/Jonicoco6.jpeg";
 import Jonicoco3 from "../images/Jonicoco5.jpeg";
-import Accordion from 'react-bootstrap/Accordion';
+
 import { Card, CardHeader, CardBody, Box, Text, Heading, Image, } from '@chakra-ui/react'
 
 const Nosotros = () => {
   return (
 
-
     <div>
+
+<div id="carouselExampleCaptions" className="carousel slide">
+  <div className="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div className="carousel-inner">
+    <div className="carousel-item active">
+      <img src={Jonicoco3} className="d-block w-100" alt="Jonnicoco3"/>
+      <div className="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    <div className="carousel-item">
+      <img src={Jonicoco1} className="d-block w-100" alt="Jonicoco1"/>
+      <div className="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div className="carousel-item">
+      <img src={Jonicoco2} className="d-block w-100" alt="jonicoco2"/>
+      <div className="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Previous</span>
+  </button>
+  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Next</span>
+  </button>
+</div>
+
+<div className='mt-5'>
+<p className="d-inline-flex gap-1">
+  <a className="btn btn-danger" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Vision</a>
+  <button className="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Mision</button>
+  <button className="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Mostrar ambos</button>
+</p>
+<div className="row">
+  <div className="col">
+    <div className="collapse multi-collapse" id="multiCollapseExample1">
+      <div className="card card-body">
+      En  un  futuro  se  plantea  que  Jonicoco este  presente  en  almacenes  de cadena  del  pais,  que  pueda  atreaer al  visitante  en  aeropuertos  y terminales.
+      </div>
+    </div>
+  </div>
+  <div className="col">
+    <div className="collapse multi-collapse" id="multiCollapseExample2">
+      <div className="card card-body">
+        Some placeholder content for the second collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<h2 className='text-aligin-center'>NUESTROS PRODUCTOS</h2>
 
 
       <div class="card-group" style={{ padding: '' }}>
@@ -39,58 +103,7 @@ const Nosotros = () => {
           </div>
         </div>
       </div>
-      <div>
-        <h2 className='text-danger' style={{ padding: '20px' }}>Quienes somos </h2>
-        <Accordion defaultActiveKey="0">
-          <Accordion.Item eventKey="0">
-            <Accordion.Header > <h5 className='text-danger text-center ' >Como nace Jonicoco</h5></Accordion.Header>
-            <Accordion.Body className='estilos de carrusel' style={{ padding: '50x', width: "50" }}>
-              Jonicoco nace de varias inquietudes, la primera es que para Rosa quienes es la emprendedora de pequeña su padre la llevaba a comer después de misa coco con velita, y para ella era una duda por qué no se podían comer juntos, en un solo producto. Junto con su hija, a pesar de que la idea era realizar bombones, el resultado fue la panelita de coco, con la que se desarrolla Jonicoco
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="1">
-            <Accordion.Header> <h5 className='text-danger text-center'> Crecimiento exponencial</h5> </Accordion.Header>
-            <Accordion.Body>
-              El negocio de Jonicoco ha crecido mucho porque gusta. Acá en el municipio de Donmatías nos han hecho propaganda por redes sociales y ayudado mucho la voz a voz. En el municipio se vende en tiendas, fábricas de confección, escuelas, colegios. También a los municipios de Yarumal, Santa Rosa, Medellín, San Jose de la Montaña, San Andrés de Cuerquia
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="3">
-            <Accordion.Header><h5 className='text-danger text-center'>Valores corporativos</h5></Accordion.Header>
-            <Accordion.Body>
-              Para Jonicoco es importante que haya transparencia, donde haya confianza para futuras negociaciones, además de que el cliente se sienta seguro consumiendo el producto.
-
-              La puntualidad es vital ya que se realizan pedidos y para Jonicoco es importante que se cumplan los tiempos pactados, en los que se valora la producción y la distribución del producto.
-
-              Y sin olvidar que la pasión con la que se hace el producto se transmita al consumidor quien finalmente es quien está deleitándose y sintiendo las emociones de felicidad, alegrías que van inmersas en cada panelita
-
-            </Accordion.Body>
-          </Accordion.Item>
-          <Accordion.Item eventKey="4">
-            <Accordion.Header><h5 className='text-danger text-center'>Responsabilidad social empresarial</h5></Accordion.Header>
-            <Accordion.Body>
-              Para Jonicoco es importante disminuir la generación de residuos, por ello se intenta dentro de lo posible la disminución de residuos sólidos. La generación de empleos es importante dentro del municipio de Donmatías y que hay diversificación, de esta manera Jonicoco se convierte una opción para que familias se unan al equipo de trabajo y se les pueda brindar una equidad salarial para todos.
-
-            </Accordion.Body>
-          </Accordion.Item>
-
-          <Accordion.Item eventKey="5">
-            <Accordion.Header><h5 className='text-danger text-center'>Mision y Vision</h5></Accordion.Header>
-            <Accordion.Body>
-              MISION <br />
-              <br />
-
-              Jonicoco pretende Fabricar una excelente mezcla natural de panela y coco, para obtener un producto de alta calidad, buen precio y sabor. Acompañar las panelitas con una deliciosa mazamorra pilada y prestar un excelente servicio en el local comercial. <br />
-
-              VISION <br />
-              <br />
-              En un futuro se plantea que Jonicoco esté presente en almacenes de cadena del país, que pueda atraer al visitante en aeropuertos y terminales y de que se pueda internacionalizar, exportando a los países vecinos
-
-
-            </Accordion.Body>
-          </Accordion.Item>
-
-        </Accordion>
-      </div>
+      
       {/*inicio de carta*/}
 
       <div className='Titulo' style={{ width: "100%", padding: "30px" }}><h2>Encargados de la empresa</h2></div>
