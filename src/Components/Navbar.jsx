@@ -26,7 +26,7 @@ const Navbar = () => {
                   className="nav-link active py-3 px-5 text-white btn-2"
                   aria-current="page"
                 >
-                  Inicio
+                 Inicio
                 </Link>
               </li>
               <li className="nav-item">

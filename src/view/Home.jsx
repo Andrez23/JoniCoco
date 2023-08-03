@@ -16,7 +16,7 @@ const Home = () => {
       {/*inicio primera columna */}
       <div>
         <div className="mt-5">
-          <h1 className="titulo">Algunos productos</h1>
+          <h1 className="titulo"><span style={{color:"#911625"}}>Nuestros</span> productos</h1>
           <div className="container" style={{ marginTop: "3%" }}>
             <div className="row">
               <div className="col-md-12 col-lg-6">
@@ -40,6 +40,8 @@ const Home = () => {
                       Vero dolorem eligendi nobis, distinctio quasi recusandae
                       officiis veritatis at non maiores molestias deleniti
                       accusamus et ab alias vitae tempora cum. Commodi.{" "}
+                      <hr />
+                      <h3><span style={{color:"#911625"}}>Caja por 20 unidades +1 :</span> 20.000COP</h3>
                     </p>
                     <button className="leerMas">Mas información</button>
                   </div>
@@ -65,6 +67,8 @@ const Home = () => {
                       Ut cumque dolore dicta at odio aperiam velit a, eius
                       quaerat libero, sapiente assumenda quis nemo neque tenetur
                       quod quas eligendi magni!
+                      <hr />
+                      <h3 style={{color:"black"}}><span style={{color:"#fff"}}>Unidad:</span> 20.000COP</h3>
                     </p>
                     <button className="leerMas mt-4">Mas información</button>
                   </div>
@@ -109,6 +113,8 @@ const Home = () => {
                       Voluptates unde non ipsam vel, iste itaque ea sunt aut
                       explicabo esse perferendis quam! Aliquam eaque quibusdam,
                       dolor doloribus distinctio id aut!
+                      <hr />
+                      <h3 ><span style={{color:"#911625"}}>Tarrito por 10 unidades:</span> 8.000COP</h3>
                     </p>
                     <button className="leerMas">Mas información</button>
                   </div>
