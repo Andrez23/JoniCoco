@@ -62,7 +62,7 @@ const Contactenos = () => {
                         </div>
 
                         <button type="submit" className="btn btn-danger mb-2">
-                          Submit
+                          Enviar
                         </button>
                       </form>
                     </div>

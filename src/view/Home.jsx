@@ -1,7 +1,6 @@
 import React from "react";
 import EditJoniCoco3 from "../images/EditJoniCoco3 - banner.png";
 import Jonicoco2 from "../images/Jonicoco2.jpeg";
-import videoCoco from "../images/videoCoco.mp4";
 import "../view/EstilosHome.css";
 
 
@@ -125,41 +124,7 @@ const Home = () => {
         </div>
         {/*Final tercera columna */}
         <hr />
-        {/*Inicio Conocenos */}
-
-        <div class="container text-center">
-          <h1>Conocenos</h1>
-          <div class="row">
-            <div class="col">
-              <div>
-                <div className="mt-3">
-                  <div className="col-md-12 col-lg-12 ">
-                    <div className="container " style={{ padding: "0%" }}>
-                      <div className=" embed-responsive embed-responsive-16by9">
-                        <video
-                          controls
-                          width="100%"
-                          height="100%"
-                          className="npm video"
-                        >
-                          <source src={videoCoco} type="video/mp4" />
-                          Tu navegador no soporta el elemento de video.
-                        </video>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col">2 of 2</div>
-          </div>
-          {/*Final conocenos */}
-          <hr />
-          {/*Inicio Ubicacion */}
-          
         </div>
-      </div>
     </div>
   );
 };
