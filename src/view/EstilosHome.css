@@ -32,6 +32,7 @@
     overflow: hidden;
     display: inline-block;
     box-shadow: 5px 5px 15px rgba(3, 32, 51, .8);
+    text-decoration: none;
   }
   .leerMas:hover {
     color: #fff; /* color de fuente hover */

@@ -60,7 +60,6 @@ const Contactenos = () => {
                             id="exampleInputPassword1"
                           />
                         </div>
-
                         <button type="submit" className="btn btn-danger mb-2">
                           Enviar
                         </button>
@@ -72,12 +71,10 @@ const Contactenos = () => {
                   <div className="container" style={{ marginTop: "15%" }}>
                     <div className="base_footer">
                       <h3 className="mb-3">Horarios de atención</h3>
+                      <hr />
                       <p className="parraf">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Vero dolorem eligendi nobis, distinctio quasi
-                        recusandae officiis veritatis at non maiores molestias
-                        deleniti accusamus et ab alias vitae tempora cum.
-                        Commodi.{" "}
+                        <span style={{color:"#911625"}}>Lunes a viernes: </span>8am a 12pm <br /> 2pm a 4 y 30pm <br />
+                        <span style={{color:"#911625"}}> Sabados: </span>8am a 1pm{" "}
                       </p>
                     </div>
                   </div>
