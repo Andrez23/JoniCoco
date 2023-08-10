@@ -11,15 +11,13 @@ const Footer = () => {
                     <div className="container py-4 py-lg-5 ">
                         <div className="row"> {/*lo ponemos como fila*/}
                             <div className="col-sm-12 col-md-6 item">
-                                <h3 className="footer-links-title">Servicios</h3>
+                                <h3 className="footer-links-title"><strong>¿Qué hacemos?</strong></h3>
                                 <hr/> {/*Este permite crear la linea que separa el parrafo */}
-                                <ul className="footer-links list-unstyled">
-                                    <li><Link className="link-light text-decoration-none" href="/about">What is HomieTouch</Link></li>
-                                    <li><Link className="link-light text-decoration-none" href="/#team">Our Team</Link></li>
-                                    <li><Link className="link-light text-decoration-none" href="/contactenos">Contactenos</Link></li>
-                                    <li><Link className="link-light text-decoration-none" href="/terms-privacy">Terms & Conditions</Link></li>
-                                    <li><Link className="link-light text-decoration-none" href="/terms-privacy">Privacy Policy</Link></li>
-                                </ul>
+                                <p>
+                                    Nuestros productos tienen como ingrediente principal y escencial el coco, creando distintas combinaciones para tu paladar.
+
+                                </p>
+                                
                             </div>
                             <div className="col-sm-12 col-md-6 item">
                                 <h3><strong>Contactanos</strong></h3>

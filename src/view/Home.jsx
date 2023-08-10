@@ -15,7 +15,7 @@ const Home = () => {
       {/*inicio primera columna */}
       <div>
         <div className="mt-5">
-          <h1 className="titulo">Algunos productos</h1>
+          <h1 className="titulo"><span style={{color:"#911625"}}>Nuestros</span> productos</h1>
           <div className="container" style={{ marginTop: "3%" }}>
             <div className="row">
               <div className="col-md-12 col-lg-6">
@@ -35,10 +35,9 @@ const Home = () => {
                   </div>
                   <div className="base_footer">
                     <p className="parraf">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Vero dolorem eligendi nobis, distinctio quasi recusandae
-                      officiis veritatis at non maiores molestias deleniti
-                      accusamus et ab alias vitae tempora cum. Commodi.{" "}
+                      Apta para cualquier tipo de ocasion, la cajita la hace más especial para compartir con las personas que más quieres, practica para enmarcar y regalar en celebraciones y momentos especiales. {" "}
+                      <hr />
+                      <h3><span style={{color:"#911625"}}>Caja por 6 unidades  :</span> </h3>
                     </p>
                     <button className="leerMas">Mas información</button>
                   </div>
@@ -50,7 +49,7 @@ const Home = () => {
         {/*Final primera columna */}
 
         {/*Inicio segunda columna */}
-        <div className="fonduco">
+        <div className="fonduco"> 
           <div className="container" style={{ marginTop: "5%" }}>
             <div className="row ">
               <div className="col-md-12 col-lg-6">
@@ -60,10 +59,9 @@ const Home = () => {
                   </div>
                   <div className="base_footer">
                     <p className="parraf text-white">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Ut cumque dolore dicta at odio aperiam velit a, eius
-                      quaerat libero, sapiente assumenda quis nemo neque tenetur
-                      quod quas eligendi magni!
+                     Una presentación que va desde lo individual hasta la cantidad que desees, practica para llevar a cualquier lado y disfrutar en cualquier momento del día.
+                      <hr />
+                      <h3 style={{color:"black"}}><span style={{color:"#fff"}}>Al detal</span> </h3>
                     </p>
                     <button className="leerMas mt-4">Mas información</button>
                   </div>
@@ -100,14 +98,14 @@ const Home = () => {
               <div className="col-md-12 col-lg-6">
                 <div className="container" style={{ marginTop: "2%" }}>
                   <div className="base_header">
-                    <h3>Tarriro</h3>
+                    <h3>Tarrito</h3>
                   </div>
                   <div className="base_footer">
                     <p className="parraf">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Voluptates unde non ipsam vel, iste itaque ea sunt aut
-                      explicabo esse perferendis quam! Aliquam eaque quibusdam,
-                      dolor doloribus distinctio id aut!
+                     Una presentación que se acomoda según tus necesidades y tus gustos, con la comodidad de elegir cuantas unidades deseas y luego puedes reutilizarlo a tu modo.
+                      <hr />
+                      <h3 ><span style={{color:"#911625"}}>Tarrito pequeño por 5 unidades:</span> </h3>
+                      <h3 ><span style={{color:"#911625"}}>Tarrito grande por 10 unidades:</span> </h3>
                     </p>
                     <button className="leerMas">Mas información</button>
                   </div>
@@ -116,17 +114,10 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="mt-3">
-
+        {/*Final tercera columna */}
+        <hr />
         </div>
-
-
-      </div>
-
-
-
     </div>
-
   );
 };
 

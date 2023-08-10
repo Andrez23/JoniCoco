@@ -26,7 +26,7 @@ const Navbar = () => {
                   className="nav-link active py-3 px-5 text-white btn-2"
                   aria-current="page"
                 >
-                  Inicio
+                 Inicio
                 </Link>
               </li>
               <li className="nav-item">
@@ -56,6 +56,12 @@ const Navbar = () => {
                   Contactenos
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link
+                  to="Login"
+                  className="nav-link active py-3 px-5 text-white btn-2"
+                  aria-current="page"
+                >Entrar</Link></li>
             </ul>
             {/*<form className="d-flex" role="search">
               <input
