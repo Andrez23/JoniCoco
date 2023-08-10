@@ -36,27 +36,109 @@ const Nosotros = () => {
 
         <h2 className="text-aligin-center mt-5 mb-4">FUNDADORES</h2>
 
-        <div className="contenedor">
-          <div className="card ">
-            <div className="bkg"></div>
-            <img src={Jonicoco2} id="profile" alt="" />
-            <div className="info">
-              <h1>Rosa Angelica Medina</h1>
-              <h3>Empresaria</h3>
+        <div className="contenedor container-fluid">
+          <div className="row">
+            {/* Primer carTeam*/}
+            <div className="cardteam me-4 mb-5">
+              <div className="bkg"></div>
+              <img src={Jonicoco2} id="profile" alt="" />
+              <div className="info">
+                <h1>Rosa Angelica Medina</h1>
+                <h3>Empresaria</h3>
+              </div>
+              <div className="descript">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Consectetur maxime tempore quibusdam itaque facere. Non a
+                  atque totam deleniti ex?
+                </p>
+                <p>-Rosita</p>
+              </div>
+              <div className="social">
+                <img src={Jonicoco2} alt="" />{" "}
+                {/*Aqui van las redes sociales */}
+                <img src={Jonicoco2} alt="" />
+                <img src={Jonicoco2} alt="" />
+                <img src={Jonicoco2} alt="" />
+              </div>
             </div>
-            <div className="descript">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consectetur maxime tempore quibusdam itaque facere. Non a atque
-                totam deleniti ex?
-              </p>
-              <p>-Rosita</p>
+            <div className="col">
+              {/* Segund carTeam*/}
+              <div className="cardteam mb-5">
+                <div className="bkg"></div>
+                <img src={Jonicoco2} id="profile" alt="" />
+                <div className="info">
+                  <h1>Rosa Angelica Medina</h1>
+                  <h3>Empresaria</h3>
+                </div>
+                <div className="descript">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Consectetur maxime tempore quibusdam itaque facere. Non a
+                    atque totam deleniti ex?
+                  </p>
+                  <p>-Rosita</p>
+                </div>
+                <div className="social">
+                  <img src={Jonicoco2} alt="" />{" "}
+                  {/*Aqui van las redes sociales */}
+                  <img src={Jonicoco2} alt="" />
+                  <img src={Jonicoco2} alt="" />
+                  <img src={Jonicoco2} alt="" />
+                </div>
+              </div>
             </div>
-            <div className="social">
-              <img src={Jonicoco2} alt="" /> {/*Aqui van las redes sociales */}
-              <img src={Jonicoco2} alt="" />
-              <img src={Jonicoco2} alt="" />
-              <img src={Jonicoco2} alt="" />
+            <div className="col">
+              {/* Tercera carTeam*/}
+              <div className="cardteam mb-5">
+                <div className="bkg"></div>
+                <img src={Jonicoco2} id="profile" alt="" />
+                <div className="info">
+                  <h1>Rosa Angelica Medina</h1>
+                  <h3>Empresaria</h3>
+                </div>
+                <div className="descript">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Consectetur maxime tempore quibusdam itaque facere. Non a
+                    atque totam deleniti ex?
+                  </p>
+                  <p>-Rosita</p>
+                </div>
+                <div className="social">
+                  <img src={Jonicoco2} alt="" />{" "}
+                  {/*Aqui van las redes sociales */}
+                  <img src={Jonicoco2} alt="" />
+                  <img src={Jonicoco2} alt="" />
+                  <img src={Jonicoco2} alt="" />
+                </div>
+              </div>
+            </div>
+            <div className="col">
+              {/* Cuarta carTeam*/}
+              <div className="cardteam ">
+                <div className="bkg"></div>
+                <img src={Jonicoco2} id="profile" alt="" />
+                <div className="info">
+                  <h1>Rosa Angelica Medina</h1>
+                  <h3>Empresaria</h3>
+                </div>
+                <div className="descript">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Consectetur maxime tempore quibusdam itaque facere. Non a
+                    atque totam deleniti ex?
+                  </p>
+                  <p>-Rosita</p>
+                </div>
+                <div className="social">
+                  <img src={Jonicoco2} alt="" />{" "}
+                  {/*Aqui van las redes sociales */}
+                  <img src={Jonicoco2} alt="" />
+                  <img src={Jonicoco2} alt="" />
+                  <img src={Jonicoco2} alt="" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -125,19 +207,17 @@ const Nosotros = () => {
                   id="multiCollapseExample2"
                 >
                   <div className="card card-body">
-                    Nos visualizamos como la principal fuente de felicidad e
-                    indulgencia en el mercado de las panelitas de coco. Buscamos
-                    ser reconocidos por nuestra innovación continua, calidad
-                    excepcional y compromiso con la creatividad. Aspiramos a
-                    expandir nuestra presencia en nuevos mercados, cautivando
-                    los corazones de personas de todas las edades con nuestra
-                    amplia gama de productos irresistibles. A medida que
-                    crecemos, mantenemos nuestro enfoque en la sostenibilidad y
-                    la responsabilidad social, contribuyendo positivamente a las
-                    comunidades en las que operamos. Nuestra visión es ser el
-                    nombre al que acuden las personas en busca de momentos
-                    dulces y memorables, creando conexiones duraderas a través
-                    de la alegría que brindamos."
+                    Nos vemos como la principal fuente de felicidad en el
+                    mercado de las panelitas de coco. Buscamos destacar por
+                    calidad excepcional y compromiso con la
+                    creatividad. Queremos expandirnos en nuevos mercados,
+                    cautivando a todas las edades con nuestra variedad de
+                    productos irresistibles. Mantenemos un enfoque en la
+                    sostenibilidad y la responsabilidad social al crecer,
+                    contribuyendo positivamente en las comunidades donde
+                    operamos. Queremos convertirnos en la marca preferido para
+                    momentos dulces y memorables, creando conexiones duraderas a
+                    través de la alegría que brindamos.
                   </div>
                 </div>
               </div>

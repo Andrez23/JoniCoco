@@ -1,8 +1,23 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./StiloJonicoco.css";
 
 const Navbar = () => {
+  const [isCollapsed, setIsCollapsed] = useState(true);
+  const navigate = useNavigate();
+
+  const handleToggle = () => {
+    setIsCollapsed(!isCollapsed);
+  };
+
+  const handleLinkClick = () => {
+    setIsCollapsed(true);
+  };
+
+  const navigateTo = (path) => {
+    handleLinkClick();
+    navigate(path);
+  };
   return (
     <div>
       <nav className="navbar navbar-expand-lg colormenu">
@@ -10,29 +25,38 @@ const Navbar = () => {
           <button
             className="navbar-toggler"
             type="button"
+            onClick={handleToggle}
+            aria-controls="navbarSupportedContent"
+            aria-expanded={!isCollapsed}
+            aria-label="Toggle navigation"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <div
+            className={`collapse navbar-collapse justify-content-end${
+              isCollapsed ? "" : " show"
+            }`}
+            id="navbarSupportedContent"
+          >
             <ul className="navbar-nav mx-auto font">
               <li className="nav-item">
                 <Link
                   to="/"
                   className="nav-link active py-3 px-5 text-white btn-2"
+                  onClick={() => navigateTo("/")}
                   aria-current="page"
                 >
-                 Inicio
+                  Inicio
                 </Link>
               </li>
               <li className="nav-item">
                 <Link
                   to="nosotros"
                   className="nav-link active py-3 px-5 text-white btn-2"
+                  onClick={() => navigateTo("/")}
                   aria-current="page"
                 >
                   Nosotros
@@ -42,6 +66,7 @@ const Navbar = () => {
                 <Link
                   to="resena"
                   className="nav-link active py-3 px-5 text-white btn-2"
+                  onClick={() => navigateTo("/")}
                   aria-current="page"
                 >
                   Reseña
@@ -51,6 +76,7 @@ const Navbar = () => {
                 <Link
                   to="contactenos"
                   className="nav-link active py-3 px-5 text-white btn-2"
+                  onClick={() => navigateTo("/")}
                   aria-current="page"
                 >
                   Contactenos
@@ -71,7 +97,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-    </div> 
+    </div>
   );
 };
 
