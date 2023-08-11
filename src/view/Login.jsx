@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
-//import './Login.css'
+import './Login.css'
+import NavbarDashboard from '../Dashboard/components/NavbarDashboard'
 
 const Login = () => {
   return (
     <div>
-     
+     <NavbarDashboard/>
       <div >
         <div className="row justify-content-center imgfondo">
             <div className="col-md-6 col-xl-4 ">

@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-//import "./StiloJonicoco.css";
+import React, { useState } from 'react';
+import logo from "../components/logo.png"
+import { Link, useNavigate } from 'react-router-dom';
 
 const NavbarDashboard = () => {
   const [isCollapsed, setIsCollapsed] = useState(true);
@@ -20,85 +20,86 @@ const NavbarDashboard = () => {
   };
   return (
     <div>
-      <nav className="navbar navbar-expand-lg colormenu">
+      <nav className="navbar navbar-expand-lg navbar-light colormenu">
         <div className="container-fluid">
-          <button
-            className="navbar-toggler"
-            type="button"
-            onClick={handleToggle}
-            aria-controls="navbarSupportedContent"
-            aria-expanded={!isCollapsed}
-            aria-label="Toggle navigation"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-          >
+          <Link to="/" className="navbar-brand">
+            <img className="rounded-circle border border-5" src={logo} style={{ width: 100 }} alt="" />
+          </Link>
+          <button className="navbar-toggler" type="button" onClick={handleToggle}             aria-controls="navbarSupportedContent" aria-expanded={!isCollapsed} aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
-
-          <div
-            className={`collapse navbar-collapse justify-content-end${
-              isCollapsed ? "" : " show"
-            }`}
-            id="navbarSupportedContent"
-          >
-            <ul className="navbar-nav mx-auto font">
+          <div className={`collapse navbar-collapse justify-content-end${isCollapsed ? '' : ' show'}`} id="navbarSupportedContent">
+            <ul className="navbar-nav mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link
-                  to="/"
-                  className="nav-link active py-3 px-5 text-white btn-2"
-                  onClick={() => navigateTo("/")}
-                  aria-current="page"
-                >
-                  Home
+                <Link to="/aplication" className="nav-link text-white" onClick={() => navigateTo('/')}>
+                  <i className="fa-solid fa-house fa-sm me-2"></i>Inicio
                 </Link>
               </li>
               <li className="nav-item">
-                <Link
-                  to="nosotros"
-                  className="nav-link active py-3 px-5 text-white btn-2"
-                  onClick={() => navigateTo("/")}
-                  aria-current="page"
-                >
-                  Nosotros
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  to="resena"
-                  className="nav-link active py-3 px-5 text-white btn-2"
-                  onClick={() => navigateTo("/")}
-                  aria-current="page"
-                >
-                  Reseña
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  to="contactenos"
-                  className="nav-link active py-3 px-5 text-white btn-2"
-                  onClick={() => navigateTo("/")}
-                  aria-current="page"
-                >
-                  Contactenos
+                <Link to="reserva" className="nav-link text-white" onClick={() => navigateTo('/')}>
+                  <i className="fa-solid fa-hotel fa-sm me-2"></i>...
                 </Link>
               </li>
 
               <li className="nav-item">
-                <Link
-                  to="Login"
-                  className="nav-link active py-3 px-5 text-white btn-2"
-                  onClick={() => navigateTo("/")}
-                  aria-current="page"
-                >
-                  Ingresar
+                <Link to="paquetes" className="nav-link text-white" onClick={() => navigateTo('/paquetes')}>
+                  <i className="fa-solid fa-box-open fa-sm me-2"></i>...
                 </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="destinos" className="nav-link text-white" onClick={() => navigateTo('/destinos')}>
+                  <i className="fa-solid fa-plane fa-sm me-2"></i>...
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="cliente" className="nav-link text-white" onClick={() => navigateTo('/cliente')}>
+                  <i className="fa-sharp fa-solid fa-person fa-sm me-2"></i>...
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="proveedores" className="nav-link text-white" onClick={() => navigateTo('/proveedores')}>
+                  <i className="fa-solid fa-parachute-box fa-sm me-2"></i>,,,
+                </Link>
+              </li>
+              <li className="nav-item dropdown">
+                <Link
+                  className="nav-link dropdown-toggle text-white" id="navbarDropdown" role="button"  data-bs-toggle="dropdown" aria-expanded="false"
+                >
+                  <i className="fa-solid fa-user-tie fa-sm me-2"></i>
+                  Usuario
+                </Link>
+                <ul
+                  className="dropdown-menu dropdown-menu-end"
+                  aria-labelledby="navbarDropdown"
+                >
+                  <li>
+                    <Link className="dropdown-item">
+                      <i className="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>
+                      Perfil
+                    </Link>
+                  </li>
+                  <li>
+                    <hr className="dropdown-divider" />
+                  </li>
+                  <li>
+                    <Link className="dropdown-item"><i className="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i> Configurción</Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item"><i className="fas fa-list fa-sm fa-fw me-2 text-gray-400"></i> Registro de actividades</Link>
+                  </li>
+                  <li>
+                    <Link to="/login" className="dropdown-item"><i className="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>
+                      Cerrar sesión
+                    </Link>
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>
         </div>
       </nav>
     </div>
-  );
-};
+  )
+}
 
-export default NavbarDashboard;
+export default NavbarDashboard
