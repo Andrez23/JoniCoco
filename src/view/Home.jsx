@@ -2,10 +2,15 @@ import React from "react";
 import EditJoniCoco3 from "../images/EditJoniCoco3 - banner.png";
 import Jonicoco2 from "../images/Jonicoco2.jpeg";
 import "../view/EstilosHome.css";
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer"
 
 
 const Home = () => {
   return (
+    <div>
+    <Navbar/>
+
     <div>
       <div className="mb-5">
         <header className="img-fluid">
@@ -117,6 +122,8 @@ const Home = () => {
         {/*Final tercera columna */}
         <hr />
         </div>
+    </div>
+    <Footer />
     </div>
   );
 };

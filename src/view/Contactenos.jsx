@@ -1,9 +1,14 @@
 import React from "react";
 import "../view/EstilosContactanos.css";
 import MapContainer from "../view/MapContainer";
+import Navbar from "../Components/Navbar"
+import Footer from "../Components/Footer"
 
 const Contactenos = () => {
   return (
+    <div>
+    <Navbar/>
+    
     <div className="fondo">
       {/*Inicio de ubicación*/}
       <div style={{ height: "400px", width: "100%" }}>
@@ -60,7 +65,6 @@ const Contactenos = () => {
                             id="exampleInputPassword1"
                           />
                         </div>
-
                         <button type="submit" className="btn btn-danger mb-2">
                           Enviar
                         </button>
@@ -72,13 +76,10 @@ const Contactenos = () => {
                   <div className="container" style={{ marginTop: "15%" }}>
                     <div className="base_footer">
                       <h3 className="mb-3">Horarios de atención</h3>
+                      <hr />
                       <p className="parraf">
-                        Lunes a viernes 
-                        de 8am a 12pm <br></br> 2pm a 4 y 30pm 
-                        <br></br>
-                        sabados 
-                        de 8am a 1pm 
-                        {" "}
+                        <span style={{color:"#911625"}}>Lunes a viernes: </span>8am a 12pm <br /> 2pm a 4 y 30pm <br />
+                        <span style={{color:"#911625"}}> Sabados: </span>8am a 1pm{" "}
                       </p>
                     </div>
                   </div>
@@ -88,6 +89,9 @@ const Contactenos = () => {
           </div>
         </div>
       </div>
+      </div>
+
+    <Footer />
     </div>
   );
 };
