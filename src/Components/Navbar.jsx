@@ -82,6 +82,17 @@ const Navbar = () => {
                   Contactenos
                 </Link>
               </li>
+
+              <li className="nav-item">
+                <Link
+                  to="Login"
+                  className="nav-link active py-3 px-5 text-white btn-2"
+                  onClick={() => navigateTo("/")}
+                  aria-current="page"
+                >
+                  Ingresar
+                </Link>
+              </li>
             </ul>
             {/*<form className="d-flex" role="search">
               <input
