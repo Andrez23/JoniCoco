@@ -32,35 +32,31 @@ const NavbarDashboard = () => {
             <ul className="navbar-nav mb-2 mb-lg-0">
               <li className="nav-item">
                 <Link to="/aplication" className="nav-link text-white" onClick={() => navigateTo('/')}>
-                  <i className="fa-solid fa-house fa-sm me-2"></i>Inicio
+                <i className="fa-solid fa-house me-2" style={{color: "#ebeff4"}}></i>Inicio
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="reserva" className="nav-link text-white" onClick={() => navigateTo('/')}>
-                  <i className="fa-solid fa-hotel fa-sm me-2"></i>...
+                <Link to="Clientes" className="nav-link text-white" onClick={() => navigateTo('/')}>
+                <i className="fa-solid fa-person me-2" style={{color: "#ebeff4"}}></i>   
+                 Clientes
                 </Link>
               </li>
 
               <li className="nav-item">
-                <Link to="paquetes" className="nav-link text-white" onClick={() => navigateTo('/paquetes')}>
-                  <i className="fa-solid fa-box-open fa-sm me-2"></i>...
+                <Link to="Productos" className="nav-link text-white" onClick={() => navigateTo('/paquetes')}>
+                <i className="fa-solid fa-store me-2" style={{color: "#ebeff4"}}></i>
+                Productos
+
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="destinos" className="nav-link text-white" onClick={() => navigateTo('/destinos')}>
-                  <i className="fa-solid fa-plane fa-sm me-2"></i>...
+                <Link to="Facturas" className="nav-link text-white" onClick={() => navigateTo('/destinos')}>
+                <i className="fa-solid fa-list-check me-2" style={{color: "#ebeff4"}}></i>
+                Facturas
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link to="cliente" className="nav-link text-white" onClick={() => navigateTo('/cliente')}>
-                  <i className="fa-sharp fa-solid fa-person fa-sm me-2"></i>...
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="proveedores" className="nav-link text-white" onClick={() => navigateTo('/proveedores')}>
-                  <i className="fa-solid fa-parachute-box fa-sm me-2"></i>,,,
-                </Link>
-              </li>
+              
+
               <li className="nav-item dropdown">
                 <Link
                   className="nav-link dropdown-toggle text-white" id="navbarDropdown" role="button"  data-bs-toggle="dropdown" aria-expanded="false"
