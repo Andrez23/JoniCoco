@@ -9,7 +9,7 @@ import Resena from './view/Resena';
 import Login from "./view/Login"
 import Aplication from './Dashboard/Aplication'
 
-import Homee from "./Tienda/Inicio";
+//import Usuario from './view/Usuario';
 import Inicio from './Tienda/Inicio';
 
 
@@ -24,6 +24,7 @@ function App() {
       <Route path='contactenos' element={<Contactenos/>}/>
       <Route path='login' element={<Login/>}/>
       <Route path='inicio' element={<Inicio/>}/>
+     
 
       <Route exact path="/aplication/*" element={<Aplication/>} />
      </Routes>

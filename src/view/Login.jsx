@@ -19,6 +19,7 @@ const Login = () => {
                     <div className="mb-3"><input className="form-control" type="password" name="password" placeholder="Contraseña" /></div>
                     <div className="mb-3"><Link to="/aplication"><button className="btn btn-danger d-block w-100" > Ingresar </button></Link></div>
                     <p>¿olvidaste  tu contraseña?</p>
+                    <div><Link to="/aplication"><button className='btn btn-dangerd-block w-100'>Registrarme </button></Link></div>
                   </form>
                 </div>
               </div>
