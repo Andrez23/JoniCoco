@@ -5,7 +5,7 @@ import NavbarDashboard from './components/NavbarDashboard'
 import Clientes from "../Dashboard/Clientes"
 import Facturas from "../Dashboard/Facturas"
 import Productos from "../Dashboard/Productos"
-
+import Usuario from "../view/Usuario"
 const Aplication = () => {
   return (
     <div>
@@ -16,7 +16,10 @@ const Aplication = () => {
             <Route path='clientes' element={<Clientes/>}/>
             <Route path='productos' element={<Productos/>}/>
             <Route path='facturas' element={<Facturas/>}/>
-           
+          
+        </Routes>
+        <Routes>
+        <Route path='Usuario' element={<Usuario/>}/>
         </Routes>
         
     </div>

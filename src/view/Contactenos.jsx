@@ -1,9 +1,14 @@
 import React from "react";
 import "../view/EstilosContactanos.css";
 import MapContainer from "../view/MapContainer";
+import Navbar from "../Components/Navbar"
+import Footer from "../Components/Footer"
 
 const Contactenos = () => {
   return (
+    <div>
+    <Navbar/>
+    
     <div className="fondo">
       {/*Inicio de ubicación*/}
       <div style={{ height: "400px", width: "100%" }}>
@@ -84,6 +89,9 @@ const Contactenos = () => {
           </div>
         </div>
       </div>
+      </div>
+
+    <Footer />
     </div>
   );
 };

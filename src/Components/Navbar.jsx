@@ -48,7 +48,7 @@ const Navbar = () => {
                   className="nav-link active py-3 px-5 text-white btn-2"
                   onClick={() => navigateTo("/")}
                   aria-current="page"
-                >
+                > <i className="fa-solid fa-house me-2" style={{color: "#ebeff4"}}></i>
                   Inicio
                 </Link>
               </li>
@@ -56,9 +56,9 @@ const Navbar = () => {
                 <Link
                   to="nosotros"
                   className="nav-link active py-3 px-5 text-white btn-2"
-                  onClick={() => navigateTo("/")}
+                  onClick={() => navigateTo("Nosotros")}
                   aria-current="page"
-                >
+                > <i className="fa-regular fa-handshake me-2" style={{color: "#ebeff4"}}></i>
                   Nosotros
                 </Link>
               </li>
@@ -66,9 +66,9 @@ const Navbar = () => {
                 <Link
                   to="resena"
                   className="nav-link active py-3 px-5 text-white btn-2"
-                  onClick={() => navigateTo("/")}
+                  onClick={() => navigateTo("Resena")}
                   aria-current="page"
-                >
+                > <i className="fa-solid fa-book me-2" style={{color: "#ebeff4"}}></i>
                   Reseña
                 </Link>
               </li>
@@ -76,24 +76,35 @@ const Navbar = () => {
                 <Link
                   to="contactenos"
                   className="nav-link active py-3 px-5 text-white btn-2"
-                  onClick={() => navigateTo("/")}
+                  onClick={() => navigateTo("contactenos")}
                   aria-current="page"
-                >
+                > <i className="fa-solid fa-phone me-2" style={{color: "#ebeff4"}}></i>
                   Contactenos
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link
+                  to="Inicio"
+                  className="nav-link active py-3 px-5 text-white btn-2"
+                  onClick={() => navigateTo("Inicio")}
+                  aria-current="page">
+              <i className="fa-solid fa-cart-shopping me-2" style={{color: "#ebeff4"}}></i>
+              Tienda
+              </Link>
+              </li>
+
+              <li className="nav-item">
+                <Link
+                  to="Login"
+                  className="nav-link active py-3 px-5 text-white btn-2"
+                  onClick={() => navigateTo("login")}
+                  aria-current="page"
+                > <i className="fa-solid fa-door-closed me-2" style={{color: "#ebeff4"}}></i>
+                
+                  Ingresar
+                </Link>
+              </li>
             </ul>
-            {/*<form className="d-flex" role="search">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Buscar"
-                aria-label="Search"
-              />
-              <button className="btn btn-outline-success" type="submit">
-                Buscar
-              </button>
-            </form>*/}
           </div>
         </div>
       </nav>

@@ -2,8 +2,13 @@ import React from "react";
 import Jonicoco2 from "../images/Jonicoco2.jpeg";
 import Portada from "../images/Portada.jpg";
 
+import Navbar from "../Components/Navbar"
+import Footer from "../Components/Footer"
+
 const Resena = () => {
   return (
+    <div>
+       <Navbar />
     <div className="container">
       <div className="row">
         <div className="col-md-6 mt-2">
@@ -64,6 +69,8 @@ const Resena = () => {
           </div>
         </div>
       </div>
+    </div>
+    <Footer />
     </div>
   );
 };

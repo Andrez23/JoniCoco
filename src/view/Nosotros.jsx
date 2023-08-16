@@ -5,8 +5,14 @@ import Jonicoco3 from "../images/Jonicoco5.jpeg";
 import videoCoco from "../images/videoCoco.mp4";
 import "../view/EstilosNosotros.css";
 
+import Navbar from "../Components/Navbar"
+import Footer from "../Components/Footer"
+
+
 const Nosotros = () => {
   return (
+    <div>
+       <Navbar />
     <div className="container mt-5">
       <h1>
         <span style={{ color: "#911625" }}>¿Quienes</span> Somos?
@@ -313,6 +319,9 @@ const Nosotros = () => {
           </div>
         </div>
       </div>
+    </div>
+    
+<Footer />
     </div>
   );
 };
