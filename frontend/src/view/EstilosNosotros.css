@@ -1,0 +1,125 @@
+.tamañoL{ /*tamaño letra de vision y mision*/
+    font-size: 20px;
+}
+
+.cardteam{
+    height: 500px;
+    width: 300px;
+    position: relative;
+    box-shadow: 1px 1px 10px grey;
+    text-align: center;
+    background: linear-gradient(-20deg, white 60%,#911625 10%);
+    cursor: pointer;
+    overflow: hidden;
+    
+}
+
+#profile{
+    width: 180px;
+    border-radius: 50%;
+    margin: 100px auto;
+    position: relative;
+    z-index: 2 ;
+    transition: .4s;
+}
+
+.cardteam:hover{
+    background: whitesmoke;
+}
+
+.cardteam:hover #profile{
+    transform: translate(-120px, -80px);
+    width: 120px;
+}
+
+.info{
+    color: #911625;
+    transform: translateY(-70px);
+    transform: .4s;
+}
+
+.cardteam:hover .info{
+    transform: translate(70px, -280px);
+}
+
+h1{
+    font-size: 30px;
+}
+
+h3{
+    font-size: 20px;
+}
+
+.cardteam:hover h1{
+    font-size: 20px;
+}
+
+.cardteam:hover h3{
+    font-size: 20px;
+}
+
+.bkg{
+    height: 150px;
+    width: 100%;
+    background: #911625;
+    position: absolute;
+    z-index: 2;
+    top: 30px;
+    transition: .5s;
+}
+
+.cardteam:hover .bkg {
+    top: 420px;
+    background: #911625;
+}
+
+.descript{
+    width: 100%;
+    margin: 0px auto;
+    font-size: 20px;
+    padding: 20px; 
+    opacity: 0;
+    transform: .5s;
+}
+
+.cardteam:hover .descript{
+    opacity: 1;
+    transform: translateY(-220px);
+    border-top: 2px solid #911625;
+}
+
+.social{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    z-index: 3;
+}
+
+.social img{
+    height: 40px;
+    width: 40px;
+    margin: 15px;
+    transform: translateY(60px);
+    transition: .3s;
+}
+
+.social img:nth-child(2){
+    transition-delay: .1s;
+}
+
+.social img:nth-child(3){
+    transition-delay: .2s;
+}
+
+.social img:nth-child(4){
+    transition-delay: .3s;
+}
+.cardteam:hover .social img{
+    transform: none;
+}
+
+.cardteam:hover .social img:hover{
+    transform: translateY(-10px);
+}
