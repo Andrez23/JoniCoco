@@ -53,8 +53,8 @@ facturaCtrl.update = async (req, res) => {
 
         const facturaUpdate = {
             codigofactura,
-            fecha,
-            metododepago
+            metododepago,
+            fecha
         }
         await factura.updateOne(facturaUpdate)
         res.json({

@@ -21,7 +21,7 @@ orden_pedidoCtrl.add = async (req, res) => {
         const newOrdenPedido = new orden_pedidoModel({
             estadocompra, 
             fechacreacion,
-            preciototal,
+            preciototal
             
         })
         await newOrdenPedido.save()
@@ -54,7 +54,7 @@ orden_pedidoCtrl.update = async (req, res) => {
         const orden_pedidoUpdate = {
             estadocompra, 
             fechacreacion,
-            preciototal,
+            preciototal
             
         }
         await orden_pedido.updateOne(orden_pedidoUpdate)

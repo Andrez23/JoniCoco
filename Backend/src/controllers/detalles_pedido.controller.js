@@ -20,7 +20,7 @@ detalles_pedidoCtrl.add = async (req, res) => {
         const { preciounitario, cantidad } = req.body
         const newDetallesPedido = new detalles_pedidoModel({
             preciounitario,
-            cantidad,
+            cantidad
         })
         await newDetallesPedido.save()
         res.json({
@@ -51,7 +51,7 @@ detalles_pedidoCtrl.update = async (req, res) => {
 
         const detalles_pedidoUpdate = {
             preciounitario,
-            cantidad,
+            cantidad
         }
         await detalles_pedido.updateOne(detalles_pedidoUpdate)
         res.json({

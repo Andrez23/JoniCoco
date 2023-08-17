@@ -17,4 +17,4 @@ app.use(cors({ origin: "*" }));
 
 
 
-app.listen(app.get(`Port`), () => { console.log(`servidor funcionando por el puerto`, app.get(`Port`)); });
+app.listen(app.get(`Port`), () => { console.log(`servidor corriendo por el puerto`, app.get(`Port`)); });

@@ -17,17 +17,17 @@ clienteCtrl.listar= async (req,res) => {
 
 clienteCtrl.add= async (req,res) => {
     try {
-        const { primernombre , segundonombre, primerapellido, segundoapellido, tipodocumento, numerodocumento,correoelectronico, direccion,telefono, } = req.body
+        const { n_documento , tipodedocumento, primernombre, segundonombre, primerapellido, segundoapellido,correoelectronico, direccion,telefono, } = req.body
         const newCliente = new ClienteModel({
+            n_documento,
+            tipodedocumento,
             primernombre,
             segundonombre,
             primerapellido,
             segundoapellido,
-            tipodocumento,
-            numerodocumento,
             correoelectronico,
             direccion,
-            telefono,
+            telefono
             
         });
         await newCliente.save();
@@ -45,7 +45,7 @@ clienteCtrl.add= async (req,res) => {
     }
 };
 
-ClienteCtrl.update=async (req,res)=>{
+clienteCtrl.update=async (req,res)=>{
     try {
         const { id }=req.params
         const cliente=await clienteModel.findById({_id:id})
@@ -57,12 +57,12 @@ ClienteCtrl.update=async (req,res)=>{
             })
         }
 
+        const n_documento = req.body.n_documento || cliente.n_documento
+        const tipodedocumento = req.body.tipodedocumento || cliente.tipodedocumento
         const primernombre = req.body.primernombre || cliente.primernombre
         const segundonombre = req.body.segundonombre || cliente.segundonombre
         const primerapellido = req.body.primerapellido || cliente.primerapellido
         const segundoapellido = req.body.segundoapellido || cliente.segundoapellido
-        const tipodocumento = req.body.tipodocumento || cliente.tipodocumento
-        const numerodocumento = req.body.numerodocumento || cliente.numerodocumento
         const correoelectronico = req.body.correoelectronico || cliente.correoelectronico
         const direccion = req.body.direccion || cliente.direccion
         const telefono = req.body.telefono || cliente.telefono
@@ -71,15 +71,15 @@ ClienteCtrl.update=async (req,res)=>{
 
 
         const clienteUpdate = {
+            n_documento,
+            tipodedocumento,
             primernombre,
             segundonombre,
             primerapellido,
             segundoapellido,
-            tipodocumento,
-            numerodocumento,
             correoelectronico,
             direccion,
-            telefono,
+            telefono
             
         }
         await cliente.updateOne(clienteUpdate)

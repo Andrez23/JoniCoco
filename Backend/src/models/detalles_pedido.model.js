@@ -2,11 +2,11 @@ const { Schema, model } = require('mongoose')
 const mongoosePaginate = require('mongoose-paginate-v2');
 
 const userSchema = new Schema({  // schema se refiere a una varible cualquiera, es decir, puede llevar cualquier nombre
-    Precio_unitario: {
+    preciounitario: {
         type: Number,
         required: true,
     },
-    Cantidad: {
+    cantidad: {
         type: Number,
         required: true,
     }, 
@@ -17,4 +17,4 @@ const userSchema = new Schema({  // schema se refiere a una varible cualquiera, 
 
 userSchema.plugin(mongoosePaginate)
 
-module.exports = model('Detalle_de_pedido', userSchema);
+module.exports = model('detalle_de_pedido', userSchema);
