@@ -1,11 +1,12 @@
 const productoCtrl ={}
+const productoModel = require(`../models/producto.model`)
 
 productoCtrl.listar= async (req,res) => {
     try {
-        const producto = await ptoductoModel.find();
+        const producto = await productoModel.find();
         res.json({
             ok: true,
-            usuario,
+            producto,
         });
     } catch (error) {
         res.status(500).json ({

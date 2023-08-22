@@ -1,4 +1,5 @@
 const usuarioCtrl ={}
+const usuarioModel= require(`../models/usuario.model`)
 
 usuarioCtrl.listar= async (req,res) => {
     try {

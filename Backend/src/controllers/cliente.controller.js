@@ -1,4 +1,5 @@
 const clienteCtrl ={}
+const clienteModel= require(`../models/cliente.model`)
 
 clienteCtrl.listar= async (req,res) => {
     try {
@@ -18,7 +19,7 @@ clienteCtrl.listar= async (req,res) => {
 clienteCtrl.add= async (req,res) => {
     try {
         const { n_documento , tipodedocumento, primernombre, segundonombre, primerapellido, segundoapellido,correoelectronico, direccion,telefono, } = req.body
-        const newCliente = new ClienteModel({
+        const newCliente = new clienteModel({
             n_documento,
             tipodedocumento,
             primernombre,

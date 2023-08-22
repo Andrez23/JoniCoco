@@ -1,4 +1,5 @@
 const facturaCtrl = {}
+const facturaModel= require(`../models/factura.model`)
 
 facturaCtrl.listar = async (req, res) => {
     try {

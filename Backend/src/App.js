@@ -1,18 +1,26 @@
 const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
+
 require('./database');
 
 const app = express();
-//configurando o asignando un puerto para nuestro servidor
+
 app.set("Port", 4000);
-//el morgan nos sirve para saber que tipo de dato de peticiones esta recibiendo nuestro servidor
+
 app.use(morgan("dev"));
-//express json, nos sirve para convertir los datos en objetos json y leerlos 
-app.use(express.urlencoded({ extended: true }));
+
+app.use(express.urlencoded({extended: true}));
 app.use(express.json());
-//cors nos sirve para permitir conexiones desde cualquier cliente
-app.use(cors({ origin: "*" }));
+
+app.use(cors({origin: "*"}));
+
+app.use("/clientes",require('./routes/cliente.route'));
+app.use("/detallepedido", require('./routes/detallepedido.route'));
+app.use("/factura",require('./routes/factura.route'));
+app.use("/ordenp",require(`./routes/ordenp.route`));
+app.use("/producto", require('./routes/producto.route'));
+app.use("/usuario", require('./routes/usuario.route'));
 
 
 
