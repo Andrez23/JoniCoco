@@ -4,7 +4,7 @@ const clienteCtrl = require('../controllers/cliente.controller');
 const route = Router();
 
 route.get('/listar', clienteCtrl.listar);                                     
-route.get('/listid/:id', clienteCtrl.listid);                                   
+//route.get('/listid/:id', clienteCtrl.listid);                                   
 route.post('/add', clienteCtrl.add);
 route.put('/update/:id', clienteCtrl.update);
 route.delete('/delete/:id', clienteCtrl.delete);

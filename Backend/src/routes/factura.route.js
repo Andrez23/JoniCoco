@@ -4,7 +4,7 @@ const facturaCtrl = require('../controllers/factura.controller');
 const route = Router();
 
 route.get('/listar', facturaCtrl.listar);                                     
-route.get('/listid/:id', facturaCtrl.listid);                                   
+//route.get('/listid/:id', facturaCtrl.listid);                                   
 route.post('/add', facturaCtrl.add);
 route.put('/update/:id', facturaCtrl.update);
 route.delete('/delete/:id', facturaCtrl.delete);
