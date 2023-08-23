@@ -38,7 +38,14 @@ const clienteSchema = new Schema({  // schema se refiere a una varible cualquier
     telefono:{
         type: Number,
         default: 0,
-    }
+    },
+
+    
+    
+
+
+    
+
 },
     {
         timestamps: true //Fecha donde se creó el esquema

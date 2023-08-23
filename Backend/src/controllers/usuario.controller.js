@@ -3,7 +3,7 @@ const usuarioModel= require(`../models/usuario.model`)
 
 usuarioCtrl.listar= async (req,res) => {
     try {
-        const usuario = await usuarioModel.find();
+        const usuario = await usuarioModel.find().populate("detallepedido").populate("ordenp").populate("factura");
         res.json({
             ok: true,
             usuario,
@@ -18,7 +18,7 @@ usuarioCtrl.listar= async (req,res) => {
 
 usuarioCtrl.add= async (req,res) => {
     try {
-        const { primernombre , segundonombre, primerapellido, segundoapellido, tipodocumento, numerodocumento,correoelectronico, direccion,telefono, contraseña } = req.body
+        const { primernombre , segundonombre, primerapellido, segundoapellido, tipodocumento, numerodocumento,correoelectronico, direccion,telefono, ordenp,detallepedido,factura} = req.body
         const newUsuario = new usuarioModel({
             primernombre,
             segundonombre,
@@ -29,7 +29,10 @@ usuarioCtrl.add= async (req,res) => {
             correoelectronico,
             direccion,
             telefono,
-            contraseña
+            
+            ordenp,
+            detallepedido,
+            factura
         });
         await newUsuario.save();
         res.json({
@@ -67,7 +70,9 @@ usuarioCtrl.update=async (req,res)=>{
         const correoelectronico = req.body.correoelectronico || usuario.correoelectronico
         const direccion = req.body.direccion || usuario.direccion
         const telefono = req.body.telefono || usuario.telefono
-        const contraseña = req.body.contraseña || usuario.contraseña
+        const ordenp= req.body.ordenp   || usuario.ordenp
+        const detallepedido= req.body.detallepedido  || usuario.detallepedido
+        const factura = req.body.factura  || usuario.factura
 
 
 
@@ -81,7 +86,9 @@ usuarioCtrl.update=async (req,res)=>{
             correoelectronico,
             direccion,
             telefono,
-            contraseña
+            ordenp,
+            detallepedido,
+            factura
 
         }
         await usuario.updateOne(usuarioUpdate)

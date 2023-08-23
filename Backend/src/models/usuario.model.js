@@ -27,11 +27,7 @@ const usuarioSchema = new Schema({  // schema se refiere a una varible cualquier
         type: String,
         require: true,
     },
-    contraseña:{
-        type: Number,
-        require: true,
-        unique: true,
-    },
+   
     direccion:{
         type: String,
         default: 0,
@@ -39,7 +35,11 @@ const usuarioSchema = new Schema({  // schema se refiere a una varible cualquier
     telefono:{
         type: String,
         default: 0,
-    }
+    },
+
+    ordenp: [{type:Schema.Types.ObjectId, ref: "ordenp"}],
+    detallepedido: [{type:Schema.Types.ObjectId, ref: "detallepedido"}],
+    factura: [{type:Schema.Types.ObjectId, ref: "factura"}]
 },
     {
         timestamps: true //Fecha donde se creó el esquema

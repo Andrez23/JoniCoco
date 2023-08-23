@@ -15,6 +15,9 @@ const ordenSchema = new Schema({  // schema se refiere a una varible cualquiera,
         required: true,
     },
     
+  
+    cliente: [{type:Schema.Types.ObjectId, ref: "cliente"}],
+    detallepedido: [{type:Schema.Types.ObjectId, ref: "detallepedido"}]
 },
     {
         timestamps: true //Fecha donde se creó el esquema

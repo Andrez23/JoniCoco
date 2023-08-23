@@ -3,7 +3,7 @@ const ordenpModel= require(`../models/ordenp.model`)
 
 ordenpCtrl.listar = async (req, res) => {
     try {
-        const ordenp = await ordenpModel.find()
+        const ordenp = await ordenpModel.find().populate("detallepedido").populate("cliente");
         res.json({
             ok: true,
             ordenp,
@@ -18,11 +18,13 @@ ordenpCtrl.listar = async (req, res) => {
 
 ordenpCtrl.add = async (req, res) => {
     try {
-        const { estadocompra, fechacreacion, preciototal, } = req.body
+        const { estadocompra, fechacreacion, preciototal,detallepedido,cliente} = req.body
         const newOrdenPedido = new ordenpModel({
             estadocompra, 
             fechacreacion,
-            preciototal
+            preciototal,
+            detallepedido,
+            cliente,
             
         })
         await newOrdenPedido.save()
@@ -52,10 +54,15 @@ ordenpCtrl.update = async (req, res) => {
         const estadocompra = req.body.estadocompra || ordenp.estadocompra
         const fechacreacion = req.body.fechacreacion || ordenp.fechacreacion
         const preciototal = req.body.preciototal || ordenp.preciototal
+        const detallepedido = req.body.detallepedido || ordenp.detallepedido
+        const cliente = req.body.cliente || ordenp.cliente
+
         const ordenpUpdate = {
             estadocompra, 
             fechacreacion,
-            preciototal
+            preciototal, 
+            detallepedido,
+            cliente,
             
         }
         await ordenp.updateOne(ordenpUpdate)

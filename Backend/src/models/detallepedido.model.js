@@ -10,6 +10,8 @@ const detallesSchema = new Schema({  // schema se refiere a una varible cualquie
         type: Number,
         required: true,
     }, 
+
+    producto: [{type:Schema.Types.ObjectId, ref: "producto"}],
 },
     {
         timestamps: true //Fecha donde se creó el esquema

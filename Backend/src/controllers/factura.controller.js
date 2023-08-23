@@ -3,7 +3,7 @@ const facturaModel= require(`../models/factura.model`)
 
 facturaCtrl.listar = async (req, res) => {
     try {
-        const facturas = await facturaModel.find()
+        const facturas = await facturaModel.find().populate("detallepedido").populate("ordenp")
         res.json({
             ok: true,
             facturas,
@@ -18,11 +18,13 @@ facturaCtrl.listar = async (req, res) => {
 
 facturaCtrl.add = async (req, res) => {
     try {
-        const { codigofactura, metododepago, fecha } = req.body
+        const { codigofactura, metododepago, fecha,ordenp,detallepedido } = req.body
         const newFactura = new facturaModel({
             codigofactura,
             metododepago,
-            fecha
+            fecha,
+            ordenp,
+            detallepedido
         })
         await newFactura.save()
         res.json({
@@ -51,11 +53,15 @@ facturaCtrl.update = async (req, res) => {
         const codigofactura = req.body.codigofactura || factura.codigofactura
         const metododepago = req.body.metododepago || factura.metododepago
         const fecha = req.body.fecha || factura.fecha
+        const ordenp = req.body.ordenp || factura.ordenp
+        const detallepedido = req.body.detallepedido || factura.detallepedido
 
         const facturaUpdate = {
             codigofactura,
             metododepago,
-            fecha
+            fecha,
+            ordenp,
+            detallepedido
         }
         await factura.updateOne(facturaUpdate)
         res.json({

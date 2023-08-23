@@ -14,6 +14,12 @@ const FacturaSchema = new Schema({  // schema se refiere a una varible cualquier
         type: String,
         required: true,
     }, 
+
+   ordenp: [{type:Schema.Types.ObjectId, ref: "ordenp"}],
+
+
+    detallepedido: [{type:Schema.Types.ObjectId, ref: "detallepedido"}]
+
 },
     {
         timestamps: true //Fecha donde se creó el esquema
