@@ -2,7 +2,9 @@ import React from 'react'
 
 const Clientes = () => {
   return (
-    <div>Clientes</div>
+   <div>
+    SOLO SE VISUALIZARA LA INFO DE LOS USUARIOS REGISTRADOS 
+   </div>
   )
 }
 

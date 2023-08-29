@@ -6,6 +6,8 @@ import Clientes from "../Dashboard/Clientes"
 import Facturas from "../Dashboard/Facturas"
 import Productos from "../Dashboard/Productos"
 import Usuario from "../view/Usuario"
+import Pedidos from "../Dashboard/Pedidos"
+
 const Aplication = () => {
   return (
     <div>
@@ -16,6 +18,8 @@ const Aplication = () => {
             <Route path='clientes' element={<Clientes/>}/>
             <Route path='productos' element={<Productos/>}/>
             <Route path='facturas' element={<Facturas/>}/>
+            <Route path='pedidos' element={<Pedidos/>}/>
+          
           
         </Routes>
         <Routes>
