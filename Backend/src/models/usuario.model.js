@@ -2,15 +2,15 @@ const { Schema, model } = require('mongoose')
 const mongoosePaginate = require('mongoose-paginate-v2');
 
 const usuarioSchema = new Schema({  // schema se refiere a una varible cualquiera, es decir, puede llevar cualquier nombre
-    numerodocumento: {
-        type: Number,
-        required: true,
-    },
     tipodocumento: {
         type: String,
         required: true,
     },
-
+numerodocumento: {
+        type: Number,
+        required: true,
+    },
+    
     primernombre: {
         type: String,
         required: true,
@@ -35,6 +35,14 @@ const usuarioSchema = new Schema({  // schema se refiere a una varible cualquier
     telefono:{
         type: String,
         default: 0,
+    },
+   contrasena:{
+        type: String,
+        require: true
+    },
+    email:{
+        type:String,
+        require: true
     },
 
     ordenp: [{type:Schema.Types.ObjectId, ref: "ordenp"}],

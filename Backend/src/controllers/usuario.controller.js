@@ -18,7 +18,7 @@ usuarioCtrl.listar= async (req,res) => {
 
 usuarioCtrl.add= async (req,res) => {
     try {
-        const { primernombre , segundonombre, primerapellido, segundoapellido, tipodocumento, numerodocumento,correoelectronico, direccion,telefono, ordenp,detallepedido,factura} = req.body
+        const { primernombre , segundonombre, primerapellido, segundoapellido, tipodocumento, numerodocumento,correoelectronico, direccion,telefono,contrasena,email, ordenp,detallepedido,factura} = req.body
         const newUsuario = new usuarioModel({
             primernombre,
             segundonombre,
@@ -29,6 +29,8 @@ usuarioCtrl.add= async (req,res) => {
             correoelectronico,
             direccion,
             telefono,
+            contrasena,
+            email,
             
             ordenp,
             detallepedido,
@@ -70,6 +72,8 @@ usuarioCtrl.update=async (req,res)=>{
         const correoelectronico = req.body.correoelectronico || usuario.correoelectronico
         const direccion = req.body.direccion || usuario.direccion
         const telefono = req.body.telefono || usuario.telefono
+        const contrasena = req.body.contrasena || usuario.contrasena
+        const email = req.body.email || usuario.email
         const ordenp= req.body.ordenp   || usuario.ordenp
         const detallepedido= req.body.detallepedido  || usuario.detallepedido
         const factura = req.body.factura  || usuario.factura
@@ -86,6 +90,8 @@ usuarioCtrl.update=async (req,res)=>{
             correoelectronico,
             direccion,
             telefono,
+            contrasena,
+            email,
             ordenp,
             detallepedido,
             factura

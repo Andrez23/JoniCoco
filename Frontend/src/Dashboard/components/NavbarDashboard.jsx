@@ -77,7 +77,7 @@ const NavbarDashboard = () => {
                   aria-labelledby="navbarDropdown"
                 >
                   <li>
-                    <Link className="dropdown-item">
+                    <Link to= "usuario" className="dropdown-item">
                       <i className="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>
                       Perfil
                     </Link>

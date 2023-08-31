@@ -23,10 +23,20 @@ const Facturas = () => {
                   <input type="number" className="form-control" />
                 </div>
                 <div className="col-md-6">
-                  <label for="inputPassword4" className="form-label">Método de pago</label>
-                  <input type="text" className="form-control" id="inputPassword4" />
+                  <label for="inputEmail4" className="form-label">Còdigo producto</label>
+                  <input type="number" className="form-control" />
                 </div>
-                <div className="col-12">
+                <div className="col-md-6">
+                  <label for="inputEmail4" className="form-label">Metodo de pago </label>
+                  <select class="form-select form-select-sm" aria-label="Ejemplo de .form-select-sm">
+                    <option selected>selecione uno</option>
+                    <option value="1">Efectivo</option>
+                    <option value="2">Tarjeta debito/credito</option>
+                    <option value="3">Transferencia Qr</option>
+                    <option value="4">Transferencia Nequi</option>
+                  </select>
+                </div>
+                <div className="col-6">
                   <label for="inputAddress" className="form-label">Fecha</label>
                   <input type="date" className="form-control" id="inputAddress" placeholder="1234 Main St" />
                 </div>
