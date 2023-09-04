@@ -19,11 +19,11 @@ const Facturas = () => {
             <div className="modal-body">
               <form className="row g-3">
                 <div className="col-md-6">
-                  <label for="inputEmail4" className="form-label">Còdigo pedido</label>
+                  <label for="inputEmail4" className="form-label">Còdigo factura </label>
                   <input type="number" className="form-control" />
                 </div>
                 <div className="col-md-6">
-                  <label for="inputEmail4" className="form-label">Còdigo producto</label>
+                  <label for="inputEmail4" className="form-label">Còdigo pedido</label>
                   <input type="number" className="form-control" />
                 </div>
                 <div className="col-md-6">

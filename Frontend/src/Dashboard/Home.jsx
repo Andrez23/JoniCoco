@@ -32,8 +32,8 @@ const Home = () => {
         <div className="row mt-3">
 
           <div className="col-6 ">
-            <div className="card border-danger mb-3" style={{ maxWidth: "18rem" }}>
-              <div className="card-header">Encabezado</div>
+            <div className="card border-danger mb-3" style={{ maxWidth: "650px" }}>
+              <div className="card-header">Pedidos Activos </div>
               <div className="card-body text-danger">
                 <h5 className="card-title">Título de la tarjeta Danger</h5>
                 <p className="card-text">Un texto de ejemplo rápido para colocal cerca del título de la tarjeta y componer la mayor parte del contenido de la tarjeta.</p>
@@ -42,8 +42,8 @@ const Home = () => {
             </div>
 
             <div className="col-6">
-            <div className="card border-danger mb-3" style={{ maxWidth: "18rem" }}>
-              <div className="card-header">Encabezado</div>
+            <div className="card border-danger mb-3" style={{ maxWidth: "650px" }}>
+              <div className="card-header">Ultimas facturas</div>
               <div className="card-body text-danger">
                 <h5 className="card-title">Título de la tarjeta Danger</h5>
                 <p className="card-text">Un texto de ejemplo rápido para colocal cerca del título de la tarjeta y componer la mayor parte del contenido de la tarjeta.</p>
