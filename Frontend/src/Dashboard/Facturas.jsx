@@ -28,7 +28,7 @@ const Facturas = () => {
                 </div>
                 <div className="col-md-6">
                   <label for="inputEmail4" className="form-label">Metodo de pago </label>
-                  <select class="form-select form-select-sm" aria-label="Ejemplo de .form-select-sm">
+                  <select className="form-select form-select-sm" aria-label="Ejemplo de .form-select-sm">
                     <option selected>selecione uno</option>
                     <option value="1">Efectivo</option>
                     <option value="2">Tarjeta debito/credito</option>

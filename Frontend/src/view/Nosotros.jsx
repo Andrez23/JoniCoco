@@ -17,8 +17,8 @@ const Nosotros = () => {
         <h1>
           <span style={{ color: "#911625" }}>¿Quienes</span> Somos?
         </h1>
-        <div class="row">
-          <div class="col">
+        <div className="row">
+          <div className="col">
             <div>
               <div className="mt-3">
                 <div className="col-md-12 col-lg-12 ">
@@ -42,9 +42,9 @@ const Nosotros = () => {
 
           <h2 className="text-aligin-center mt-5 mb-4">FUNDADORES</h2>
 
-          <div class="container text-center">
-            <div class="row mb-5">
-              <div class="col mb-5 ">
+          <div className="container text-center">
+            <div className="row mb-5">
+              <div className="col mb-5 ">
                 <div className="cardItem me-5">
                   <div className="content">
                     <span></span>
@@ -75,7 +75,7 @@ const Nosotros = () => {
                   </div>
                 </div>
               </div>
-              <div class="col mb-5">
+              <div className="col mb-5">
                 {/*Segunda card */}
                 <div className="cardItem me-5">
                   <div className="content">
@@ -107,7 +107,7 @@ const Nosotros = () => {
                   </div>
                 </div>
               </div>
-              <div class="col mb-5">
+              <div className="col mb-5">
                 {/*Tercera card */}
                 <div className="cardItem me-5">
                   <div className="content">
@@ -139,7 +139,7 @@ const Nosotros = () => {
                   </div>
                 </div>
               </div>
-              <div class="col">
+              <div className="col">
                 {/*Cuarta card*/}
                 <div className="cardItem me-5">
                   <div className="content">
@@ -176,7 +176,7 @@ const Nosotros = () => {
 
           <div
             id="carouselExampleDark"
-            class="carousel carousel-dark slide"
+            className="carousel carousel-dark slide"
             data-bs-ride="carousel"
           >
             <div className="mt-5">
@@ -260,7 +260,7 @@ const Nosotros = () => {
               <h2 className="text-aligin-center">
                 <span style={{ color: "#911625" }}>Jonicoco </span>tiene:
               </h2>
-              <div class="container text-center">
+              <div className="container text-center">
                 <div className="mt-5">
                   <div className="container-md flex ">
                     <div className="row row-cols-1 row-cols-md-3 g-4">

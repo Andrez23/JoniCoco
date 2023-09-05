@@ -52,7 +52,7 @@ const NavbarDashboard = () => {
 
               <li className="nav-item">
                 <Link to="Pedidos" className="nav-link text-white" onClick={() => navigateTo('/paquetes')}>
-                <i class="fa-solid fa-bag-shopping me-2" style={{color: "#ebeff4"}}></i>
+                <i clasName="fa-solid fa-bag-shopping me-2" style={{color: "#ebeff4"}}></i>
                 Pedidos
                 </Link>
               </li>

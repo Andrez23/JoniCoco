@@ -21,7 +21,7 @@ const Clientes = () => {
 
         <div className="col-md-6">
             <label for="inputEmail4" className="form-label">Tipo de Documento </label>
-            <select class="form-select form-select-sm" aria-label="Ejemplo de .form-select-sm">
+            <select className="form-select form-select-sm" aria-label="Ejemplo de .form-select-sm">
               <option selected>selecione uno</option>
               <option value="1">Cedula de ciudadania</option>
               <option value="2">Tarjeta de identidad</option>
