@@ -53,7 +53,7 @@ const Pedidos = () => {
                 <div className="col-md-6">
                   <label for="inputEmail4" className="form-label">Codigo de producto</label>
                   <input type="number" className="form-control" />
-                </div> 
+                </div>
                 <div className="col-md-6">
                   <label for="formGroupExampleInput2" class="form-label">cantidad</label>
                   <input type="number" class="form-control" id="formGroupExampleInput2" />
@@ -62,7 +62,7 @@ const Pedidos = () => {
                   <label for="formGroupExampleInput2" class="form-label">precio unitario</label>
                   <input type="text" class="form-control" id="formGroupExampleInput2" />
                 </div>
-               
+
                 <div className="col-md-6">
                   <label for="formGroupExampleInput2" class="form-label">Precio Total</label>
                   <input type="text" class="form-control" id="formGroupExampleInput2" />

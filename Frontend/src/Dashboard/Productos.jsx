@@ -27,17 +27,17 @@ const Productos = () => {
                 </div>
                 <div className="col-md-6">
                   <label for="formGroupExampleInput2" class="form-label">Tipo de Presentacion</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput2"  />
+                  <input type="text" class="form-control" id="formGroupExampleInput2" />
                 </div>
                 <div className="col-md-6">
                   <label for="formGroupExampleInput2" class="form-label">Precio Base</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput2"  />
+                  <input type="text" class="form-control" id="formGroupExampleInput2" />
                 </div>
                 <div className="col-md-12">
                   <label for="formGroupExampleInput2" class="form-label">Descripción</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput2"  />
+                  <input type="text" class="form-control" id="formGroupExampleInput2" />
                 </div>
-                
+
               </form>
 
 
