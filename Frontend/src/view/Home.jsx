@@ -65,7 +65,7 @@ const Home = () => {
                   <div className="base_footer">
                     <p className="parraf text-white">
                      Una presentación que va desde lo individual hasta la cantidad que desees, practica para llevar a cualquier lado y disfrutar en cualquier momento del día.
-                      <hr />
+                      <hr/>
                       <h3 style={{color:"black"}}><span style={{color:"#fff"}}>Al detal</span> </h3>
                     </p>
                     <button className="leerMas mt-4">Mas información</button>

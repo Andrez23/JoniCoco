@@ -49,6 +49,14 @@ const NavbarDashboard = () => {
 
                 </Link>
               </li>
+
+              <li className="nav-item">
+                <Link to="Pedidos" className="nav-link text-white" onClick={() => navigateTo('/paquetes')}>
+                <i clasName="fa-solid fa-bag-shopping me-2" style={{color: "#ebeff4"}}></i>
+                Pedidos
+                </Link>
+              </li>
+
               <li className="nav-item">
                 <Link to="Facturas" className="nav-link text-white" onClick={() => navigateTo('/facturas')}>
                 <i className="fa-solid fa-list-check me-2" style={{color: "#ebeff4"}}></i>
@@ -75,7 +83,7 @@ const NavbarDashboard = () => {
                   aria-labelledby="navbarDropdown"
                 >
                   <li>
-                    <Link className="dropdown-item">
+                    <Link to= "usuario" className="dropdown-item">
                       <i className="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>
                       Perfil
                     </Link>

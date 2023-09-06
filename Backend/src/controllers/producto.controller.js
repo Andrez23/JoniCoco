@@ -18,8 +18,9 @@ productoCtrl.listar= async (req,res) => {
 
 productoCtrl.add= async (req,res) => {
     try {
-        const { nombre, descripcion, presentacion, preciobase } = req.body
+        const { codigo,nombre, descripcion, presentacion, preciobase } = req.body
         const newProducto = new productoModel({
+            codigo,
             nombre, 
             descripcion,
             presentacion,
@@ -51,7 +52,7 @@ productoCtrl.update=async (req,res)=>{
 
             })
         }
-
+        const codigo = req.body.codigo || producto.codigo 
         const nombre = req.body.nombre || producto.nombre
         const descripcion= req.body.descripcion || producto.descripcion
         const presentacion = req.body.presentacion || producto.presentacion
@@ -60,6 +61,7 @@ productoCtrl.update=async (req,res)=>{
 
 
         const productoUpdate = {
+            codigo,
             nombre, 
             descripcion,
             presentacion,

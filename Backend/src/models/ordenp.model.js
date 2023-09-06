@@ -2,6 +2,10 @@ const { Schema, model } = require('mongoose')
 const mongoosePaginate = require('mongoose-paginate-v2');
 
 const ordenSchema = new Schema({  // schema se refiere a una varible cualquiera, es decir, puede llevar cualquier nombre
+    codigopedido:{
+        type: Number,
+        default:0,
+    },
     estadocompra: {
         type: String,
         required: true,

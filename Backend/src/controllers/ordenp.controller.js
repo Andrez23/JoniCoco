@@ -18,8 +18,9 @@ ordenpCtrl.listar = async (req, res) => {
 
 ordenpCtrl.add = async (req, res) => {
     try {
-        const { estadocompra, fechacreacion, preciototal,detallepedido,cliente} = req.body
+        const { codigopedido,estadocompra, fechacreacion, preciototal,detallepedido,cliente} = req.body
         const newOrdenPedido = new ordenpModel({
+            codigopedido,
             estadocompra, 
             fechacreacion,
             preciototal,
@@ -50,7 +51,7 @@ ordenpCtrl.update = async (req, res) => {
                 message: "La orden de pedido no está registrada en la base de datos",
             })
         }
-
+        const codigopedido = req.body.codigopedido || ordenp.codigopedido
         const estadocompra = req.body.estadocompra || ordenp.estadocompra
         const fechacreacion = req.body.fechacreacion || ordenp.fechacreacion
         const preciototal = req.body.preciototal || ordenp.preciototal
@@ -58,6 +59,7 @@ ordenpCtrl.update = async (req, res) => {
         const cliente = req.body.cliente || ordenp.cliente
 
         const ordenpUpdate = {
+            codigopedido,
             estadocompra, 
             fechacreacion,
             preciototal, 

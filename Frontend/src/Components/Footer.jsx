@@ -4,7 +4,7 @@ import "../estilos_jonicoco.css";
 
 const Footer = () => {
   return (
-    <div>
+  
       <body className="color_jonicoco">
         <footer className="text-white">
           <div className="container py-4 py-lg-5 ">
@@ -29,13 +29,13 @@ const Footer = () => {
                 <ul className="footer-links list-unstyled">
                   <li>
                     <Link className="link-light text-decoration-none">
-                      <i class=" fa-solid fa-phone me-2 "></i>320 667 31 20 -
+                      <i className=" fa-solid fa-phone me-2 "></i>320 667 31 20 -
                       314 511 84 88
                     </Link>
                   </li>
                   <li>
                     <Link className="link-light text-decoration-none">
-                      <i class="fa-solid fa-envelope me-2"></i>
+                      <i className="fa-solid fa-envelope me-2"></i>
                       jonicocoemp@gmail.com
                     </Link>
                   </li>
@@ -92,7 +92,7 @@ const Footer = () => {
           </div>
         </footer>
       </body>
-    </div>
+    
   );
 };
 
