@@ -36,26 +36,32 @@ const NavbarDashboard = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="Clientes" className="nav-link text-white" onClick={() => navigateTo('/')}>
+                <Link to="Clientes" className="nav-link text-white" onClick={() => navigateTo('/clientes')}>
                 <i className="fa-solid fa-person me-2" style={{color: "#ebeff4"}}></i>   
                  Clientes
                 </Link>
               </li>
 
               <li className="nav-item">
-                <Link to="Productos" className="nav-link text-white" onClick={() => navigateTo('/paquetes')}>
+                <Link to="Productos" className="nav-link text-white" onClick={() => navigateTo('/productos')}>
                 <i className="fa-solid fa-store me-2" style={{color: "#ebeff4"}}></i>
                 Productos
 
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="Facturas" className="nav-link text-white" onClick={() => navigateTo('/destinos')}>
+                <Link to="Facturas" className="nav-link text-white" onClick={() => navigateTo('/facturas')}>
                 <i className="fa-solid fa-list-check me-2" style={{color: "#ebeff4"}}></i>
                 Facturas
                 </Link>
               </li>
               
+              <li className="nav-item">
+                <Link to="Pedidos" className="nav-link text-white" onClick={() => navigateTo('/pedidos')}>
+                <i class="fa-solid fa-bag-shopping me-2" style={{color: "#ebeff4"}}></i>
+                Pedidos
+                </Link>
+              </li>
 
               <li className="nav-item dropdown">
                 <Link

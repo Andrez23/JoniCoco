@@ -78,8 +78,7 @@ const Contactenos = () => {
                       <h3 className="mb-3">Horarios de atención</h3>
                       <hr />
                       <p className="parraf">
-                        <span style={{color:"#911625"}}>Lunes a viernes: </span>8am a 12pm <br /> 2pm a 4 y 30pm <br />
-                        <span style={{color:"#911625"}}> Sabados: </span>8am a 1pm{" "}
+                        <span style={{color:"#911625"}}>Lunes a viernes: </span>8am a 12:00pm <br /> 2pm a 4 y 30pm <br />
                       </p>
                     </div>
                   </div>

@@ -56,7 +56,7 @@ const Navbar = () => {
                 <Link
                   to="nosotros"
                   className="nav-link active py-3 px-5 text-white btn-2"
-                  onClick={() => navigateTo("Nosotros")}
+                  onClick={() => navigateTo("nosotros")}
                   aria-current="page"
                 > <i className="fa-regular fa-handshake me-2" style={{color: "#ebeff4"}}></i>
                   Nosotros
@@ -66,7 +66,7 @@ const Navbar = () => {
                 <Link
                   to="resena"
                   className="nav-link active py-3 px-5 text-white btn-2"
-                  onClick={() => navigateTo("Resena")}
+                  onClick={() => navigateTo("resena")}
                   aria-current="page"
                 > <i className="fa-solid fa-book me-2" style={{color: "#ebeff4"}}></i>
                   Reseña
@@ -84,7 +84,7 @@ const Navbar = () => {
               </li>
               <li className="nav-item">
                 <Link
-                  to="Inicio"
+                  to="inicio"
                   className="nav-link active py-3 px-5 text-white btn-2"
                   onClick={() => navigateTo("Inicio")}
                   aria-current="page">
@@ -95,7 +95,7 @@ const Navbar = () => {
 
               <li className="nav-item">
                 <Link
-                  to="Login"
+                  to="login"
                   className="nav-link active py-3 px-5 text-white btn-2"
                   onClick={() => navigateTo("login")}
                   aria-current="page"
