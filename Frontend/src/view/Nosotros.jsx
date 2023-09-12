@@ -1,18 +1,16 @@
 import React from "react";
 import Jonicoco1 from "../images/Jonicoco1.jpeg";
-import Jonicoco2 from "../images/Jonicoco6.jpeg";
 import Jonicoco3 from "../images/Jonicoco5.jpeg";
+import Jonicoco2 from "../images/Jonicoco6.jpeg";
 import videoCoco from "../images/videoCoco.mp4";
 import "../view/EstilosNosotros.css";
 
-import Navbar from "../Components/Navbar";
-import Footer from "../Components/Footer";
 import { Link } from "react-router-dom";
+import Footer from "../Components/Footer";
 
 const Nosotros = () => {
   return (
     <div>
-      <Navbar />
       <div className="container mt-5">
         <h1>
           <span style={{ color: "#911625" }}>¿Quienes</span> Somos?

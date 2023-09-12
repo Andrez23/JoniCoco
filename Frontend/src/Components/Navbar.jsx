@@ -36,9 +36,8 @@ const Navbar = () => {
           </button>
 
           <div
-            className={`collapse navbar-collapse justify-content-end${
-              isCollapsed ? "" : " show"
-            }`}
+            className={`collapse navbar-collapse justify-content-end${isCollapsed ? "" : " show"
+              }`}
             id="navbarSupportedContent"
           >
             <ul className="navbar-nav mx-auto font">
@@ -48,7 +47,7 @@ const Navbar = () => {
                   className="nav-link active py-3 px-5 text-white btn-2"
                   onClick={() => navigateTo("/")}
                   aria-current="page"
-                > <i className="fa-solid fa-house me-2" style={{color: "#ebeff4"}}></i>
+                > <i className="fa-solid fa-house me-2" style={{ color: "#ebeff4" }}></i>
                   Inicio
                 </Link>
               </li>
@@ -58,19 +57,21 @@ const Navbar = () => {
                   className="nav-link active py-3 px-5 text-white btn-2"
                   onClick={() => navigateTo("nosotros")}
                   aria-current="page"
-                > <i className="fa-regular fa-handshake me-2" style={{color: "#ebeff4"}}></i>
+                > <i className="fa-regular fa-handshake me-2" style={{ color: "#ebeff4" }}></i>
                   Nosotros
                 </Link>
               </li>
+
               <li className="nav-item">
                 <Link
                   to="resena"
                   className="nav-link active py-3 px-5 text-white btn-2"
                   onClick={() => navigateTo("resena")}
                   aria-current="page"
-                > <i className="fa-solid fa-book me-2" style={{color: "#ebeff4"}}></i>
+                > <i className="fa-solid fa-book me-2" style={{ color: "#ebeff4" }}></i>
                   Reseña
                 </Link>
+
               </li>
               <li className="nav-item">
                 <Link
@@ -78,19 +79,19 @@ const Navbar = () => {
                   className="nav-link active py-3 px-5 text-white btn-2"
                   onClick={() => navigateTo("contactenos")}
                   aria-current="page"
-                > <i className="fa-solid fa-phone me-2" style={{color: "#ebeff4"}}></i>
+                > <i className="fa-solid fa-phone me-2" style={{ color: "#ebeff4" }}></i>
                   Contactenos
                 </Link>
               </li>
               <li className="nav-item">
                 <Link
-                  to="inicio"
+                  to="tienda"
                   className="nav-link active py-3 px-5 text-white btn-2"
-                  onClick={() => navigateTo("Inicio")}
+                  onClick={() => navigateTo("tienda")}
                   aria-current="page">
-              <i className="fa-solid fa-cart-shopping me-2" style={{color: "#ebeff4"}}></i>
-              Tienda
-              </Link>
+                  <i className="fa-solid fa-cart-shopping me-2" style={{ color: "#ebeff4" }}></i>
+                  Tienda
+                </Link>
               </li>
 
               <li className="nav-item">
@@ -99,8 +100,8 @@ const Navbar = () => {
                   className="nav-link active py-3 px-5 text-white btn-2"
                   onClick={() => navigateTo("login")}
                   aria-current="page"
-                > <i className="fa-solid fa-door-closed me-2" style={{color: "#ebeff4"}}></i>
-                
+                > <i className="fa-solid fa-door-closed me-2" style={{ color: "#ebeff4" }}></i>
+
                   Ingresar
                 </Link>
               </li>

@@ -18,13 +18,21 @@ facturaCtrl.listar = async (req, res) => {
 
 facturaCtrl.add = async (req, res) => {
     try {
-        const { codigofactura, metododepago, fecha,ordenp,detallepedido } = req.body
+        const { codigofactura, metododepago,codigopedido, fecha,ordenp,detallepedido,
+        documentocliente,nombrecliente,producto,cantidad,preciounitario,preciototal } = req.body
         const newFactura = new facturaModel({
             codigofactura,
             metododepago,
             fecha,
+            codigopedido,
             ordenp,
-            detallepedido
+            detallepedido,
+            documentocliente,
+            nombrecliente,
+            producto,
+            cantidad,
+            preciounitario,
+            preciototal
         })
         await newFactura.save()
         res.json({
@@ -55,13 +63,28 @@ facturaCtrl.update = async (req, res) => {
         const fecha = req.body.fecha || factura.fecha
         const ordenp = req.body.ordenp || factura.ordenp
         const detallepedido = req.body.detallepedido || factura.detallepedido
+        const documentocliente = req.body.documentocliente || factura.documentocliente
+        const nombrecliente = req.body.nombrecliente || factura.nombrecliente
+        const codigopedido = req.body.codigopedido || factura.codigopedido
+        const producto = req.body.producto || factura.producto
+        const cantidad = req.body.cantidad || factura.cantidad
+        const preciounitario = req.body.preciounitario || factura.preciounitario
+        const preciototal = req.body.preciototal || factura.preciototal
+        
 
         const facturaUpdate = {
             codigofactura,
             metododepago,
             fecha,
             ordenp,
-            detallepedido
+            detallepedido,
+            documentocliente,
+            nombrecliente,
+            codigopedido,
+            producto,
+            cantidad,
+            preciounitario,
+            preciototal
         }
         await factura.updateOne(facturaUpdate)
         res.json({

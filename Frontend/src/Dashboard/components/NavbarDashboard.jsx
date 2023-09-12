@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import logo from "../components/logo.png"
 import { Link, useNavigate } from 'react-router-dom';
+import logo from "../components/logo.png";
 
 const NavbarDashboard = () => {
   const [isCollapsed, setIsCollapsed] = useState(true);
@@ -36,14 +36,14 @@ const NavbarDashboard = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="Clientes" className="nav-link text-white" onClick={() => navigateTo('/clientes')}>
+                <Link to="clientes" className="nav-link text-white" onClick={() => navigateTo('/clientes')}>
                 <i className="fa-solid fa-person me-2" style={{color: "#ebeff4"}}></i>   
                  Clientes
                 </Link>
               </li>
 
               <li className="nav-item">
-                <Link to="Productos" className="nav-link text-white" onClick={() => navigateTo('/productos')}>
+                <Link to="productos" className="nav-link text-white" onClick={() => navigateTo('/productos')}>
                 <i className="fa-solid fa-store me-2" style={{color: "#ebeff4"}}></i>
                 Productos
 
@@ -51,21 +51,14 @@ const NavbarDashboard = () => {
               </li>
 
               <li className="nav-item">
-                <Link to="Pedidos" className="nav-link text-white" onClick={() => navigateTo('/paquetes')}>
-                <i clasName="fa-solid fa-bag-shopping me-2" style={{color: "#ebeff4"}}></i>
-                Pedidos
-                </Link>
-              </li>
-
-              <li className="nav-item">
-                <Link to="Facturas" className="nav-link text-white" onClick={() => navigateTo('/facturas')}>
+                <Link to="facturas" className="nav-link text-white" onClick={() => navigateTo('/facturas')}>
                 <i className="fa-solid fa-list-check me-2" style={{color: "#ebeff4"}}></i>
                 Facturas
                 </Link>
               </li>
               
               <li className="nav-item">
-                <Link to="Pedidos" className="nav-link text-white" onClick={() => navigateTo('/pedidos')}>
+                <Link to="pedidos" className="nav-link text-white" onClick={() => navigateTo('/pedidos')}>
                 <i class="fa-solid fa-bag-shopping me-2" style={{color: "#ebeff4"}}></i>
                 Pedidos
                 </Link>

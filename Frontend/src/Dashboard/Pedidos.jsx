@@ -2,9 +2,6 @@ import React from 'react'
 
 const Pedidos = () => {
   return (
-<<<<<<< HEAD
-    <div>Pedidos</div>
-=======
     <div className='container-md mt-5'>
 
       <button type="button" className="btn btn-primary" style={{ backgroundColor: "#7a1520" }} data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -81,7 +78,6 @@ const Pedidos = () => {
         </div>
       </div>
     </div>
->>>>>>> 4bb89d4749e8741a6af42cb0773319ea4f0181b2
   )
 }
 

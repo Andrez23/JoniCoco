@@ -1,13 +1,11 @@
 import React from "react";
+import Footer from "../Components/Footer";
 import "../view/EstilosContactanos.css";
 import MapContainer from "../view/MapContainer";
-import Navbar from "../Components/Navbar"
-import Footer from "../Components/Footer"
 
 const Contactenos = () => {
   return (
     <div>
-    <Navbar/>
     
     <div className="fondo">
       {/*Inicio de ubicación*/}
