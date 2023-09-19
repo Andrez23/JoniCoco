@@ -30,7 +30,7 @@ const clientesSchema = new Schema({  // schema se refiere a una varible cualquie
     correoelectronico:{
         type: String,
         require: true,
-        unique: true,
+        
     },
     direccion:{
         type: String,

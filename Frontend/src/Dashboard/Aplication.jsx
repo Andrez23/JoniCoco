@@ -2,7 +2,6 @@ import React from 'react'
 
 import { Route, Routes } from 'react-router'
 import Clientes from "../Dashboard/Clientes"
-import Facturas from "../Dashboard/Facturas"
 import Home from "../Dashboard/Home"
 import Pedidos from "../Dashboard/Pedidos"
 import Productos from "../Dashboard/Productos"
@@ -17,7 +16,6 @@ const Aplication = () => {
               <Route path='/' element={<Home/>}/>
               <Route path='clientes' element={<Clientes/>}/>
               <Route path='productos' element={<Productos/>}/>
-              <Route path='facturas' element={<Facturas/>}/>
               <Route path='pedidos' element={<Pedidos/>}/>
               <Route path='usuario' element={<Usuario/>}/>
         </Routes>

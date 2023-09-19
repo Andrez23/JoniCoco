@@ -50,13 +50,7 @@ const NavbarDashboard = () => {
                 </Link>
               </li>
 
-              <li className="nav-item">
-                <Link to="facturas" className="nav-link text-white" onClick={() => navigateTo('/facturas')}>
-                <i className="fa-solid fa-list-check me-2" style={{color: "#ebeff4"}}></i>
-                Facturas
-                </Link>
-              </li>
-              
+        
               <li className="nav-item">
                 <Link to="pedidos" className="nav-link text-white" onClick={() => navigateTo('/pedidos')}>
                 <i class="fa-solid fa-bag-shopping me-2" style={{color: "#ebeff4"}}></i>
