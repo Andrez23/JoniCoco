@@ -122,8 +122,6 @@ const Clientes = () => {
     }
   }
 
-
-
   const actions = async (e) => {
     e.preventDefault();
     edit ? updateClientes() : saveClientes();
@@ -289,24 +287,21 @@ const Clientes = () => {
             <h4 className="text-danger fw-bold m-0 mt-2 text-start"> Clientes</h4>
 
             <div>
-            <button type="button" className="btn btn-danger rounded-circle  " style={{ backgroundColor: "#7a1520" }} 
+            <button type="button" className="btn btn-danger rounded-circle aling-left" style={{ backgroundColor: "#7a1520" }} 
             onClick={() => {
               setIsModalOpen(true);
             }} title="Haga clic para agregar un nuevo cliente">< i className="fa-solid fa-plus fa-beat "></i></button>
           </div>
 
-        
-
-
-
+      
         <div className='d-none d-md-block '>
 
           <div className="table-responsive -xl">
 
             <table className='table table-bordered border-danger table-hover mt-2'>
 
-              <thead>
-                <tr style={{ background: "#911625", color: "#ffffff" }}>
+              <thead className='table-danger border-danger'>
+                <tr>
                   <th scope="col" className="responsive-text">#</th>
                   <th scope="col" className="responsive-text">Tipo documento</th>
                   <th scope="col" className="responsive-text">Numero documento</th>
