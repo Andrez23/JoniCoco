@@ -18,7 +18,7 @@ clientesCtrl.listar= async (req,res) => {
 
 clientesCtrl.add= async (req,res) => {
     try {
-        const { n_documento , tipodedocumento, primernombre, segundonombre, primerapellido, segundoapellido,correoelectronico, direccion,telefono, } = req.body
+        const { n_documento , tipodedocumento, primernombre, segundonombre, primerapellido, segundoapellido,correoelectronico, direccion, telefono, razonsocial,nombre } = req.body
         const newclientes = new clientesModel({
             n_documento,
             tipodedocumento,
@@ -28,7 +28,9 @@ clientesCtrl.add= async (req,res) => {
             segundoapellido,
             correoelectronico,
             direccion,
-            telefono
+            telefono,
+            razonsocial,
+            nombre
             
         });
         await newclientes.save();
@@ -53,7 +55,7 @@ clientesCtrl.update=async (req,res)=>{
         if (!clientes){
             return res.status(400).json({
                 ok:false,
-                message:"el cliente no esta registrado en la base de datos"
+                message:"El clientes no esta registrado en la base de datos"
 
             })
         }
@@ -67,10 +69,12 @@ clientesCtrl.update=async (req,res)=>{
         const correoelectronico = req.body.correoelectronico || clientes.correoelectronico
         const direccion = req.body.direccion || clientes.direccion
         const telefono = req.body.telefono || clientes.telefono
+        const razonsocial = req.body.razonsocial || clientes.razonsocial
+        const nombre = req.body.nombre || clientes.nombre
+       
        
 
-
-
+        
         const clientesUpdate = {
             n_documento,
             tipodedocumento,
@@ -80,13 +84,15 @@ clientesCtrl.update=async (req,res)=>{
             segundoapellido,
             correoelectronico,
             direccion,
-            telefono
+            telefono,
+            razonsocial,
+            nombre
             
         }
         await clientes.updateOne(clientesUpdate)
         res.json({
             ok: true,
-            message: 'El cliente fue actualizado'
+            message: 'El clientes fue actualizado'
         })
 
 
@@ -105,15 +111,16 @@ clientesCtrl.delete= async(req,res)=>{
         if (!clientes){
             return res.status(404).json({
                 ok:false,
-                message:"el clientes no existe"
+                message:"El clientes no existe"
             })
         }
 
         await clientes.deleteOne()
         res.json({
             ok:true,
-            message:"el clientes fue eliminado de todas partes"
+            message:"El clientes fue eliminado de todas partes"
         })
+
 
 
     } catch (error) {

@@ -17,6 +17,9 @@ const Clientes = () => {
   const [correoelectronico, setCorreoelectronico] = useState('')
   const [direccion, setDireccion] = useState('')
   const [telefono, setTelefono] = useState('')
+  const [nombre, setNombre] = useState('')
+
+  const [esRazonsocial, setEsRazonsocial] = useState('NO');
 
   const [edit, setEdit] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -38,6 +41,7 @@ const Clientes = () => {
     setCorreoelectronico('')
     setDireccion('')
     setTelefono('')
+    setNombre('')
     setEdit(false);
 
   }
@@ -59,7 +63,8 @@ const Clientes = () => {
         segundoapellido,
         correoelectronico,
         direccion,
-        telefono
+        telefono,
+        nombre
       }
       await axios.post('http://localhost:5000/clientes/add', newClientes);
       cleanData();
@@ -99,8 +104,8 @@ const Clientes = () => {
         segundoapellido,
         correoelectronico,
         direccion,
-        telefono
-
+        telefono,
+        nombre
       }
       const { data } = await axios.put('http://localhost:5000/clientes/update' + id, newClientes);
       cleanData();
@@ -122,30 +127,29 @@ const Clientes = () => {
     }
   }
 
-  const actions = async (e) => {
-    e.preventDefault();
-    edit ? updateClientes() : saveClientes();
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
-
 
   const editData = (item) => {
-    setTipodedocumento(item.tipodedocumento)
-    setN_documento(item.n_documento)
-    setPrimernombre(item.primernombre)
-    setSegundonombre(item.segundonombre)
-    setPrimerapellido(item.primerapellido)
-    setSegundoapellido(item.segundoapellido)
-    setCorreoelectronico(item.correoelectronico)
-    setDireccion(item.direccion)
-    setTelefono(item.telefono)
+
+    setEdit(true);
+    setTipodedocumento(item.tipodedocumento || '')
+    setN_documento(item.n_documento || '')
+    setPrimernombre(item.primernombre || '')
+    setSegundonombre(item.segundonombre || '')
+    setPrimerapellido(item.primerapellido || '')
+    setSegundoapellido(item.segundoapellido || '')
+    setCorreoelectronico(item.correoelectronico || '')
+    setDireccion(item.direccion || '')
+    setTelefono(item.telefono || '')
+    setNombre (item.nombre  || '' )
+
     localStorage.setItem('id', item._id)
     setIsModalOpen(true);
   }
 
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
 
 
@@ -179,121 +183,158 @@ const Clientes = () => {
     }
   }
 
+  const actions = async (e) => {
+    e.preventDefault();
+    edit ? updateClientes() : saveClientes();
+  };
 
+  const handleEsRazonsocialChange = (e) => {
+    setEsRazonsocial(e.target.value);
+  };
 
   return (
     <div>
       <div className='container-md mt-5'>
 
-              <div className={`modal fade ${isModalOpen ? 'show' : ''}`} id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden={!isModalOpen} style={{ display: isModalOpen ? 'block' : 'none' }}>
-                <div className="modal-dialog modal-lg">
-                  <div className="modal-content">
-                    <div className="modal-header" style={{ backgroundColor: "#d84052" }}>
-                      <h5 className="modal-title" id="staticBackdropLabel">Registro de Clientes</h5>
-                      <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-
-                    <div className="modal-body">
-                      <form className="row g-3" onSubmit={actions}>
-
-                        <div className="col-md-6">
-                          <label for="inputEmail4" className="form-label">Tipo de Documento </label>
-                          <select className="form-select form-select-sm" aria-label="Ejemplo de .form-select-sm"
-                            value={tipodedocumento}
-                            onChange={(e) => setTipodedocumento(e.target.value)}
-                            required>
-                            <option selected>selecione uno</option>
-                            <option value="CC">Cedula de ciudadania</option>
-                            <option value="TI">Tarjeta de identidad</option>
-                            <option value="PA">Numero de pasaporte</option>
-                          </select>
-                        </div>
-
-                        <div className="col-md-6">
-                          <label for="inputEmail4" className="form-label">Numero Documento </label>
-                          <input type="text" className="form-control"
-                            value={n_documento} onChange={(e) => setN_documento(e.target.value.toUpperCase())} required />
-                        </div>
-
-                        <div className="col-md-6">
-                          <label for="inputEmail4" className="form-label">Primer nombre </label>
-                          <input type="text" className="form-control"
-                            value={primernombre} onChange={(e) => setPrimernombre(e.target.value.toUpperCase())} required />
-                        </div>
-
-                        <div className="col-md-6">
-                          <label for="inputEmail4" className="form-label">Segundo nombre </label>
-                          <input type="text" className="form-control"
-                            value={segundonombre} onChange={(e) => setSegundonombre(e.target.value.toUpperCase())} required />
-                        </div>
-
-                        <div className="col-md-6">
-                          <label for="inputEmail4" className="form-label">Primer apellido </label>
-                          <input type="text" className="form-control"
-                            value={primerapellido} onChange={(e) => setPrimerapellido(e.target.value.toUpperCase())} required />
-                        </div>
-
-                        <div className="col-md-6">
-                          <label for="inputEmail4" className="form-label">Segundo apellido </label>
-                          <input type="text" className="form-control"
-                            value={segundoapellido} onChange={(e) => setSegundoapellido(e.target.value.toUpperCase())} required />
-                        </div>
-
-                        <div className="col-md-6">
-                          <label for="inputEmail4" className="form-label">Correo electronico </label>
-                          <input type="email" className="form-control"
-                            value={correoelectronico} onChange={(e) => setCorreoelectronico(e.target.value.toUpperCase())} required />
-                        </div>
-
-                        <div className="col-md-6">
-                          <label for="inputEmail4" className="form-label">Direccion </label>
-                          <input type="text" className="form-control"
-                            value={direccion} onChange={(e) => setDireccion(e.target.value.toUpperCase())} />
-                        </div>
-
-                        <div className="col-md-6">
-                          <label for="inputPassword4" className="form-label">Telefono </label>
-                          <input type="text" className="form-control" id="inputPassword4"
-                            value={telefono} onChange={(e) => setTelefono(e.target.value.toUpperCase())} />
-                        </div>
-
-                        <div className="modal-footer border-5">
-                          <button
-                            type="button"
-                            className="btn btn-danger"
-                            onClick={() => {
-                              getData(); // Carga los datos actualizados
-                              cleanData(); // Limpia los campos del formulario
-                              closeModal();
-                            }}
-                            data-bs-dismiss="modal">
-                            Cerrar
-                          </button>
-
-                          <button type="submit" className="btn btn-primary"  >Guardar Registro</button>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
+        <div className={`modal fade ${isModalOpen ? 'show' : ''}`} id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden={!isModalOpen} style={{ display: isModalOpen ? 'block' : 'none' }}>
+          <div className="modal-dialog modal-lg">
+            <div className="modal-content">
+              <div className="modal-header" style={{ backgroundColor: "#d84052" }}>
+                <h5 className="modal-title" id="staticBackdropLabel">Registro de Clientes</h5>
+                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
 
+              <div className="modal-body">
+
+                <form id='clienteForm' onSubmit={actions}>
+                  <div className="row g-3">
+
+                    <div className="col-md-6">
+                      <label for="inputEmail4" className="form-label">Tipo de Documento </label>
+                      <select className="form-select form-select-sm" aria-label="Ejemplo de .form-select-sm"
+                        value={tipodedocumento}
+                        onChange={(e) => setTipodedocumento(e.target.value)}
+                        required>
+                        <option selected>selecione uno</option>
+                        <option value="CC">Cedula de ciudadania</option>
+                        <option value="TI">Tarjeta de identidad</option>
+                        <option value="PA">Numero de pasaporte</option>
+                      </select>
+                    </div>
+
+                    <div className="col-md-6">
+                      <label for="inputEmail4" className="form-label">Numero Documento </label>
+                      <input type="number" className="form-control"
+                        value={n_documento} onChange={(e) => setN_documento(e.target.value.toUpperCase())} required />
+                    </div>
+
+                    <div className="col-md-3">
+                      <label htmlFor="esRazonsocial" className="form-label">Es Razon social</label>
+                      <select className="form-select"
+                        id="esRazonsocial" value={esRazonsocial} onChange={handleEsRazonsocialChange} required>
+                        <option defaultValue disabled value="">Elige...</option>
+                        <option value="SI">SI</option>
+                        <option value="NO">NO</option>
+                      </select>
+                      <div className="invalid-feedback">Selecciona un estado válido.</div>
+                    </div>
+
+                    {esRazonsocial === 'SI' && (
+                      <>
+                        <div className="col-md-3 mb-3">
+                          <label for="nombre" className="form-label">Nombre</label>
+                          <input type="text" className="form-control" id="nombre"  
+                         value={nombre} onChange={(e) => setNombre(e.target.value.toUpperCase())} />
+                      </div>
+                  </>
+                    )}
 
 
-      <div className='container container-flex card Larger shadow p-3 mb-5 bg-body rounded'>
-        <div className="card-header d-flex justify-content-between align-items-center">
 
-          <div >
-            <h4 className="text-danger fw-bold m-0 mt-2 text-start"> Clientes</h4>
+                  <div className="col-md-6">
+                    <label for="inputEmail4" className="form-label">Primer nombre </label>
+                    <input type="text" className="form-control"
+                      value={primernombre} onChange={(e) => setPrimernombre(e.target.value.toUpperCase())} required />
+                  </div>
 
-            <div>
-            <button type="button" className="btn btn-danger rounded-circle aling-left" style={{ backgroundColor: "#7a1520" }} 
+                  <div className="col-md-6">
+                    <label for="inputEmail4" className="form-label">Segundo nombre </label>
+                    <input type="text" className="form-control"
+                      value={segundonombre} onChange={(e) => setSegundonombre(e.target.value.toUpperCase())} />
+                  </div>
+
+                  <div className="col-md-6">
+                    <label for="inputEmail4" className="form-label">Primer apellido </label>
+                    <input type="text" className="form-control"
+                      value={primerapellido} onChange={(e) => setPrimerapellido(e.target.value.toUpperCase())} required />
+                  </div>
+
+                  <div className="col-md-6">
+                    <label for="inputEmail4" className="form-label">Segundo apellido </label>
+                    <input type="text" className="form-control"
+                      value={segundoapellido} onChange={(e) => setSegundoapellido(e.target.value.toUpperCase())} required />
+                  </div>
+
+
+                  <div className="col-md-6">
+                    <label for="inputEmail4" className="form-label">Correo electronico </label>
+                    <input type="email" className="form-control"
+                      value={correoelectronico} onChange={(e) => setCorreoelectronico(e.target.value.toUpperCase())} required />
+                  </div>
+
+                  <div className="col-md-6">
+                    <label for="inputEmail4" className="form-label">Direccion </label>
+                    <input type="text" className="form-control"
+                      value={direccion} onChange={(e) => setDireccion(e.target.value.toUpperCase())} />
+                  </div>
+
+                  <div className="col-md-6">
+                    <label for="inputPassword4" className="form-label">Telefono </label>
+                    <input type="number" className="form-control" id="inputPassword4"
+                      value={telefono} onChange={(e) => setTelefono(e.target.value.toUpperCase())} />
+                  </div>
+
+                  <div className="modal-footer border-5">
+                    <button
+                      type="button"
+                      className="btn btn-danger"
+                      onClick={() => {
+                        getData(); // Carga los datos actualizados
+                        cleanData(); // Limpia los campos del formulario
+                        closeModal();
+                      }}
+                      data-bs-dismiss="modal">
+                      Cerrar
+                    </button>
+                    <button type="submit" className="btn btn-primary"  >Guardar Registro</button>
+                  </div>
+
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+      </div >
+
+
+
+
+  <div className='container container-flex card Larger shadow p-0 mb-15 bg-body rounded'>
+    <div className="card-header d-flex justify-content-between align-items-center">
+
+      <div >
+        <h4 className="text-danger fw-bold m-0 mt-2 text-start"> Clientes</h4>
+
+        <div>
+          <button type="button" className="btn btn-danger rounded-circle aling-left" style={{ backgroundColor: "#7a1520" }}
             onClick={() => {
               setIsModalOpen(true);
             }} title="Haga clic para agregar un nuevo cliente">< i className="fa-solid fa-plus fa-beat "></i></button>
-          </div>
+        </div>
 
-      
+
         <div className='d-none d-md-block '>
 
           <div className="table-responsive -xl">
@@ -312,6 +353,7 @@ const Clientes = () => {
                   <th scope="col" className="responsive-text">Correo electronico</th>
                   <th scope="col" className="responsive-text">Direccion</th>
                   <th scope="col" className="responsive-text">Telefono</th>
+                  <th scope="col" className='responsive-text'>Razon Social</th>
                   <th scope="col" className="responsive-text">Acciones</th>
                 </tr>
               </thead>
@@ -330,6 +372,7 @@ const Clientes = () => {
                     <td className="responsive-text">{item.correoelectronico}</td>
                     <td className="responsive-text" >{item.direccion}</td>
                     <td className="responsive-text">{item.telefono}</td>
+                    <td className='responsive-text'>{item.nombre}</td>
                     <td >
 
                       <div className="btn-group btn-group-sm" role="group">
@@ -370,7 +413,7 @@ const Clientes = () => {
                 <strong>correo electronico:</strong> {item.correoelectronico}<br />
                 <strong>Direccion:</strong> {item.direccion}
                 <strong>Telefono:</strong> {item.telefono}
-                <strong></strong>
+                <strong>Razon social:</strong>{item.nombre}
               </p>
               <div className='btn-group btn-group-xl'>
                 <span className='btn btn-primary d-flex align-items-center me-2'
@@ -391,9 +434,9 @@ const Clientes = () => {
 
       </div>
     </div>
-     </div>
-     </div>
-   </div>
+  </div>
+    </div >
+
 
   )
 }

@@ -103,13 +103,13 @@ const Home = () => {
                 <div className="col-md-12 col-lg-6">
                   <div className="container" style={{ marginTop: "2%" }}>
                     <div className="base_header">
-                      <h3>Tarrito pequeño</h3>
+                      <h3>Tarrito</h3>
                     </div>
                     <div className="base_footer">
                       <p className="parraf">
                         Una presentación que se acomoda según tus necesidades y tus gustos, con la comodidad de elegir cuantas unidades deseas y luego puedes reutilizarlo a tu modo.
                         <hr />
-                        <h3 ><span style={{ color: "#911625" }}>presentación por 5 unidades:</span> </h3>
+                        <h3 ><span style={{ color: "#911625" }}>Tarrito pequeño por 5 unidades:</span> </h3>
                       </p>
                       <button className="leerMas">Mas información</button>
                     </div>
@@ -122,13 +122,13 @@ const Home = () => {
                 <div className="col-md-12 col-lg-6">
                   <div className="container" style={{ marginTop: "2%" }}>
                     <div className="base_header">
-                      <h3>Tarrito grande</h3>
+                      <h3>Tarrito</h3>
                     </div>
                     <div className="base_footer">
                       <p className="parraf">
                         Una presentación que se acomoda según tus necesidades y tus gustos, con la comodidad de elegir cuantas unidades deseas y luego puedes reutilizarlo a tu modo.
                         <hr />
-                        <h3 ><span style={{ color: "#911625" }}>presentaciónpor 10 unidades:</span> </h3>
+                        <h3 ><span style={{ color: "#911625" }}>Tarrito grande por 10 unidades:</span> </h3>
                       </p>
                       <button className="leerMas">Mas información</button>
                     </div>
