@@ -39,7 +39,7 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.8);
 }
 
-.cardItem .content span{
+.cardItem .content span{ /*esta es la parte roja en diagonal de las cards*/
     position: absolute;
     width: 380px;
     height: 192px;
@@ -49,13 +49,13 @@
     left: -100px;
 }
 
-.cardItem .content h4{
+.cardItem .content h4{ /*h4*/
     font-size: 18px;
     margin-top: 15px;
     margin-bottom: 1px;
 }
 
-.cardItem .content h6{
+.cardItem .content h6{  /*h6*/
     font-size: 18px;
     color: #911625;
 }
@@ -66,24 +66,24 @@
 }
 
 .cardItem .links{
-    position: absolute;
-    z-index:90 ;
-    width: 50px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    position: absolute; 
+    z-index: 90 ;
+    width: 200px; /*ancho de la barra*/
+    display: flex; /*posicion de los logos */
+    flex-direction: row; /*alineacion de la barra*/
+    gap: 30px; /*ditancia entre logo y logo, de la barra de las redes*/
     background: rgba(255, 255, 255, 0.5);
     box-shadow: 2px 3px 5px rgba(73, 69, 52, 0.4);
-    padding: 20px;
+    padding: 10px;
     align-items: center;
-    right: 10px;
-    top: 6px;
+    right: 9px; /*posicion de donde saldrá*/
+    bottom: 10px;
     transition: .5s;
 }
 
 .cardItem:hover .links{
-    right: -50px;
-    border-radius: 0 10px 10px 0;
+    bottom: -50px;  /*de donde saldra la barra*/
+    border-radius: 10px 10px 10px 10px;
 } 
 
 .cardItem .links a{

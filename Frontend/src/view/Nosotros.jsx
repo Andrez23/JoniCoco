@@ -43,7 +43,7 @@ const Nosotros = () => {
 
       {/*Aqui inicia la posicion de las card */}
       <div className="row justify-content-md-center">
-        <h2 className="text-aligin-center mt-5 mb-4">NUESTRO EQUIPO</h2>cd 
+        <h2 className="text-aligin-center mt-5 mb-4">NUESTRO EQUIPO</h2> 
         {/* Inicio Card1 */}
         <div className="col-12 col-md-6 col-lg-3 mb-5 align-items-center mt-3">
           <div className="card cardItem">
@@ -122,8 +122,8 @@ const Nosotros = () => {
                 <img src={Developers1} alt="" />
               </div>
               <br />
-              <h4>Andrés Marín Mesa</h4>
-              <h6>Developers Junior</h6>
+              <h4>Carlos Andrés Marin</h4>
+              <h6>Developer Junior</h6>
               <br />
               <p>
                 Desarrollador Web y Lider de proyecto
@@ -157,7 +157,7 @@ const Nosotros = () => {
               </div>
               <br />
               <h4>Alejandro P. Valencia</h4>
-              <h6>Developers Junior</h6>
+              <h6>Developer Junior</h6>
               <br />
               <p>
                 Desarrollador Backend y analista de datos.
