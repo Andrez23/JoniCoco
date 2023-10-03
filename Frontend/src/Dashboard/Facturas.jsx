@@ -22,10 +22,10 @@ const Facturas = () => {
                   <label for="inputEmail4" className="form-label">Còdigo factura </label>
                   <input type="number" className="form-control" />
                 </div>
-                <div className="col-6">
-                  <label for="inputAddress" className="form-label">Fecha</label>
-                  <input type="date" className="form-control" id="inputAddress" placeholder="1234 Main St" />
-                </div> 
+                <div className="col-md-6">
+                  <label for="inputEmail4" className="form-label">Còdigo pedido</label>
+                  <input type="number" className="form-control" />
+                </div>
                 <div className="col-md-6">
                   <label for="inputEmail4" className="form-label">Metodo de pago </label>
                   <select className="form-select form-select-sm" aria-label="Ejemplo de .form-select-sm">
@@ -36,41 +36,10 @@ const Facturas = () => {
                     <option value="4">Transferencia Nequi</option>
                   </select>
                 </div>
-                <div className="col-md-6">
-                  <label for="inputEmail4" className="form-label">Documento cliente</label>
-                  <input type="text" className="form-control" />
+                <div className="col-6">
+                  <label for="inputAddress" className="form-label">Fecha</label>
+                  <input type="date" className="form-control" id="inputAddress" placeholder="1234 Main St" />
                 </div>
-                <div className="col-md-6">
-                  <label for="inputEmail4" className="form-label">Nombre  cliente</label>
-                  <input type="text" className="form-control" />
-                </div>
-                <div className="col-md-6">
-                  <label for="inputEmail4" className="form-label">Còdigo pedido</label>
-                  <input type="number" className="form-control" />
-                </div>
-
-                <div className="col-md-6">
-                  <label for="inputEmail4" className="form-label">Producto</label>
-                  <input type="text" className="form-control" />
-                </div>
-
-                <div className="col-md-6">
-                  <label for="inputEmail4" className="form-label">cantidad</label>
-                  <input type="number" className="form-control" />
-                </div>
-
-                <div className="col-md-6">
-                  <label for="inputEmail4" className="form-label">precio unitario</label>
-                  <input type="text" className="form-control" />
-                </div>
-
-                <div className="col-md-6">
-                  <label for="inputEmail4" className="form-label">Precio Total</label>
-                  <input type="text" className="form-control" />
-                </div>
-
-               
-                
               </form>
 
 
@@ -79,110 +48,6 @@ const Facturas = () => {
               <button type="button" className="btn btn-secondary" style={{ backgroundColor: "#403b3b" }} data-bs-dismiss="modal">Cerrar</button>
               <button type="button" className="btn btn-primary" style={{ backgroundColor: "#7a1520" }} >Guardar Factura</button>
             </div>
-          </div>
-        </div>
-      </div>
-
-
-      <div className='container-xl'>
-        <div className='d-none d-md-block '>
-          <div className="table-responsive">
-            <table className='table table-bordered border-danger table-hover mt-2'>
-              <thead>
-                <tr>
-                  <th scope="col" className="responsive-text">#</th>
-                  <th scope="col" className="responsive-text">Codigo factura</th>
-                  <th scope="col" className="responsive-text">Fecha</th>
-                  <th scope="col" className="responsive-text">Metodo de pago</th>
-                  <th scope="col" className="responsive-text">Documento cliente </th>
-                  <th scope="col" className="responsive-text">Nombre cliente</th>
-                  <th scope="col" className="responsive-text">Codigo pedido</th>
-                  <th scope="col" className="responsive-text">Producto</th>
-                  <th scope="col" className="responsive-text">Cantidad</th>
-                  <th scope="col" className="responsive-text">Precio unitario</th>
-                  <th scope="col" className="responsive-text">Precio total</th>
-                  <th scope="col" className="responsive-text">Acciones</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td className="responsive-text">Mark</td>
-                  <td className="responsive-text">Otto</td>
-                  <td className="responsive-text">@mdo</td>
-                  <td className="responsive-text">@mdo</td>
-                  <td className="responsive-text">@mdo</td>
-                  <td className="responsive-text">@mdo</td>
-                  <td className="responsive-text">@mdo</td>
-                  <td className="responsive-text" >@mdo</td>
-                  <td className="responsive-text">@mdo</td>
-                  <td className="responsive-text">@mdo</td>
-                  <td >
-                    <div className="btn-group btn-group-sm" role="group">
-                      <span className='btn btn-primary d-flex align-items-center me-2'>
-                        <i className="fa-solid fa-pencil space-i"></i>
-                      </span>
-                      <span className='btn btn-danger d-flex align-items-center'
-
-                      ><i className="fa-solid fa-trash"></i>
-                      </span>
-                    </div>
-                  </td>
-                </tr>
-
-                <tr>
-                  <th scope="row">2</th>
-                  <td className="responsive-text">Mark</td>
-                  <td className="responsive-text">Otto</td>
-                  <td className="responsive-text">@mdo</td>
-                  <td className="responsive-text">@mdo</td>
-                  <td className="responsive-text">@mdo</td>
-                  <td className="responsive-text">@mdo</td>
-                  <td className="responsive-text">@mdo</td>
-                  <td className="responsive-text">@mdo</td>
-                  <td className="responsive-text">@mdo</td>
-                  <td className="responsive-text">@mdo</td>
-                  <td >
-                    <div className="btn-group btn-group-sm" role="group">
-                      <span className='btn btn-primary d-flex align-items-center me-2'>
-                        <i className="fa-solid fa-pencil space-i"></i>
-                      </span>
-                      <span className='btn btn-danger d-flex align-items-center'>
-                        <i className="fa-solid fa-trash"></i>
-                      </span>
-                    </div>
-
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td className="responsive-text">Mark</td>
-                  <td className="responsive-text">Otto</td>
-                  <td className="responsive-text">@mdo</td>
-                  <td className="responsive-text">@mdo</td>
-                  <td className="responsive-text">@mdo</td>
-                  <td className="responsive-text">@mdo</td>
-                  <td className="responsive-text">@mdo</td>
-                  <td className="responsive-text">@mdo</td>
-                  <td className="responsive-text">@mdo</td>
-                  <td className="responsive-text">@mdo</td>
-                  <td >
-                    <div className="btn-group btn-group-sm" role="group">
-                      <span className='btn btn-primary d-flex align-items-center me-2'>
-                        <i className="fa-solid fa-pencil space-i"></i>
-                      </span>
-                      <span className='btn btn-danger d-flex align-items-center'>
-                        <i className="fa-solid fa-trash"></i>
-                      </span>
-                    </div>
-
-                  </td>
-                </tr>
-              </tbody>
-
-            </table>
-
-
           </div>
         </div>
       </div>

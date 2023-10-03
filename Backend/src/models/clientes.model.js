@@ -12,7 +12,7 @@ const clientesSchema = new Schema({
     },
     primernombre: {
         type: String,
-        required: true,
+        
     },
     segundonombre: {
         type: String,
@@ -20,11 +20,11 @@ const clientesSchema = new Schema({
     },
     primerapellido:{
         type: String,
-        required: true
+       
     },
     segundoapellido:{
         type: String,
-        require: true,
+        
     },
     correoelectronico:{
         type: String,
@@ -38,6 +38,7 @@ const clientesSchema = new Schema({
     telefono:{
         type: Number,
         default: 0,
+        requier:true,
     },
     razonsocial: {
         type: String,
