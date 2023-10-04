@@ -205,8 +205,11 @@ const Clientes = () => {
             <div className="modal-content">
               <div className="modal-header" style={{ backgroundColor: "#d84052" }}>
                 <h5 className="modal-title" id="staticBackdropLabel">Registro de Clientes</h5>
-                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" >
-                </button>
+                <button type="button" className="btn-close bg-white" onClick={() => {
+                  cleanData(); // Limpia los campos del formulario
+                  getData(); // Carga los datos actualizados
+                  closeModal();
+                }} />
               </div>
 
               <div className="modal-body">
