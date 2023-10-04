@@ -78,7 +78,9 @@ const NavbarDashboard = () => {
                   <li>
                     <hr className="dropdown-divider" />
                   </li>
-                 
+                  <li>
+                    <Link className="dropdown-item"><i className="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i> Configurción</Link>
+                  </li>
           
                   <li>
                     <Link to="/login" className="dropdown-item"><i className="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>

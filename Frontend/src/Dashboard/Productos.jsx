@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import Swal from 'sweetalert2';
 import "./TextResponsive.css";
+import Breadcrumbs from './components/Breadcrumbs ';
 
 const Productos = () => {
 
@@ -162,6 +163,9 @@ const Productos = () => {
 
   return (
     <div>
+      <div className=" container" style={{ textAlign: 'left' }}>
+        <Breadcrumbs />
+      </div>
       <div className='container-md mt-5'>
 
         <div className={`modal fade ${isModalOpen ? 'show' : ''}`} id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden={!isModalOpen} style={{ display: isModalOpen ? 'block' : 'none' }}>
@@ -169,11 +173,7 @@ const Productos = () => {
             <div className="modal-content">
               <div className="modal-header" style={{ backgroundColor: "#d84052" }}>
                 <h5 className="modal-title" id="staticBackdropLabel">Productos</h5>
-                <button type="button" className="btn-close bg-white" onClick={() => {
-                  cleanData(); // Limpia los campos del formulario
-                  getData(); // Carga los datos actualizados
-                  closeModal();
-                }} />
+                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
 
               <div className="modal-body">
@@ -181,25 +181,25 @@ const Productos = () => {
 
                   <div className="col-md-6">
                     <label htmlFor="inputEmail4" className="form-label">Nombre </label>
-                    <input type="text" className="form-control border-dark"
+                    <input type="text" className="form-control"
                       value={nombre} onChange={(e) => setNombre(e.target.value.toUpperCase())} required />
                   </div>
 
                   <div className="col-md-6">
                     <label htmlFor="inputEmail4" className="form-label">Descripcion </label>
-                    <input type="text" className="form-control border-dark "
+                    <input type="text" className="form-control"
                       value={descripcion} onChange={(e) => setDescripcion(e.target.value.toUpperCase())} required />
                   </div>
 
                   <div className="col-md-6">
                     <label htmlFor="inputEmail4" className="form-label">Presentacion </label>
-                    <input type="text" className="form-control border-dark"
+                    <input type="text" className="form-control"
                       value={presentacion} onChange={(e) => setPresentacion(e.target.value.toUpperCase())} required />
                   </div>
 
                   <div className="col-md-6">
                     <label htmlFor="inputEmail4" className="form-label">Precio</label>
-                    <input type="number" className="form-control border-dark"
+                    <input type="number" className="form-control"
                       value={precio} onChange={(e) => setPrecio(e.target.value.toUpperCase())} required />
                   </div>
 
@@ -219,7 +219,7 @@ const Productos = () => {
                       Cerrar
                     </button>
 
-                    <button type="submit" className="btn btn-success"  >Guardar Registro</button>
+                    <button type="submit" className="btn btn-primary"  >Guardar Registro</button>
                   </div>
                 </form>
               </div>
@@ -230,72 +230,71 @@ const Productos = () => {
 
 
         <div className='container container-flex card Larger shadow p-0 mb-15 bg-body rounded'>
+          <div className='container'>
+            <h4 className="text-danger fw-bold m-0 mt-2 text-start align-middle d-flex	justify-content-center "> Productos</h4>
+
+            <div>
+              <button type="button" className="btn btn-danger rounded-circle mt-3" style={{ backgroundColor: "#7a1520" }}
+                onClick={() => {
+                  setIsModalOpen(true);
+                }} title="Haga clic para agregar un nuevo cliente">< i className="fa-solid fa-plus fa-beat "></i></button>
+            </div>
+          </div>
           <div className="card-header d-flex justify-content-between align-items-center">
 
-            <div className='container'>
-              <h4 className="text-danger fw-bold m-0 mt-2 text-start align-middle d-flex	justify-content-center "> Productos</h4>
+            <div className='container-fluid d-flex d-none d-md-block '>
 
-              <div>
-                <button type="button" className="btn btn-danger rounded-circle mt-3" style={{ backgroundColor: "#7a1520" }}
-                  onClick={() => {
-                    setIsModalOpen(true);
-                  }} title="Haga clic para agregar un nuevo cliente">< i className="fa-solid fa-plus fa-beat "></i></button>
-              </div>
+              <div className="container container-fluid table-responsive">
+                <table className='table table-bordered table-hover mt-2'>
+                  <thead className='table-danger'>
+                    <tr>
+                      <th scope="col" className='responsive-text'> id </th>
+                      <th scope="col" className="responsive-text">Nombre</th>
+                      <th scope="col" className="responsive-text">Descripcion</th>
+                      <th scope="col" className="responsive-text">Presentacion</th>
+                      <th scope="col" className="responsive-text">Precio</th>
+                      <th scope='col' className='responsive-text'>Acciones</th>
+                    </tr>
+                  </thead>
 
+                  <tbody>
 
-              <div className='container-fluid d-flex d-none d-md-block '>
+                    {Array.isArray(productos) && productos.map((item, i) => (
 
-                <div className="container container-fluid table-responsive">
-                  <table className='table table-bordered table-hover mt-2'>
-                    <thead className='table-danger'>
-                      <tr>
-                        <th scope="col" className='responsive-text'> id </th>
-                        <th scope="col" className="responsive-text">Nombre</th>
-                        <th scope="col" className="responsive-text">Descripcion</th>
-                        <th scope="col" className="responsive-text">Presentacion</th>
-                        <th scope="col" className="responsive-text">Precio</th>
-                        <th scope='col' className='responsive-text'>Acciones</th>
+                      <tr key={item._id}>
+                        <td className="responsive-text">{i + 1}</td>
+                        <td className="responsive-text">{item.nombre}</td>
+                        <td className="responsive-text">{item.descripcion}</td>
+                        <td className="responsive-text">{item.presentacion}</td>
+                        <td className="responsive-text">{item.precio}</td>
+
+                        <td >
+
+                          <div className="btn-group btn-group-sm" role="group">
+
+                            <span className='btn btn-primary d-flex align-items-center me-2'
+                              onClick={() => editData(item)}>
+                              <i className="fa-solid fa-pencil space-i"></i>
+                            </span>
+
+                            <span className='btn btn-danger d-flex align-items-center'
+                              onClick={() => deleteProductos(item._id)} ><i className="fa-solid fa-trash" ></i>
+                            </span>
+                          </div>
+                        </td>
                       </tr>
-                    </thead>
+                    ))
+                    }
 
-                    <tbody>
-
-                      {Array.isArray(productos) && productos.map((item, i) => (
-
-                        <tr key={item._id}>
-                          <td className="responsive-text">{i + 1}</td>
-                          <td className="responsive-text">{item.nombre}</td>
-                          <td className="responsive-text">{item.descripcion}</td>
-                          <td className="responsive-text">{item.presentacion}</td>
-                          <td className="responsive-text">{item.precio}</td>
-
-                          <td >
-
-                            <div className="btn-group btn-group-sm" role="group">
-
-                              <span className='btn btn-primary d-flex align-items-center me-2'
-                                onClick={() => editData(item)}>
-                                <i className="fa-solid fa-pencil space-i"></i>
-                              </span>
-
-                              <span className='btn btn-danger d-flex align-items-center'
-                                onClick={() => deleteProductos(item._id)} ><i className="fa-solid fa-trash" ></i>
-                              </span>
-                            </div>
-                          </td>
-                        </tr>
-                      ))
-                      }
-
-                    </tbody>
-                  </table>
-                </div>
+                  </tbody>
+                </table>
               </div>
             </div>
 
-            <div className='d-md-none'>
+
+            <div className='container d-md-none'>
               {Array.isArray(productos) && productos.map((item, i) => (
-                <div key={item._id} className='card border-3'>
+                <div key={item._id} className='card border-3 nt-3'>
                   {/* Contenido de la tarjeta */}
                   <div className='card-body'>
                     <h5 className='card-title'>Productos {i + 1}</h5>
@@ -328,7 +327,7 @@ const Productos = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div >
 
   )
 }
