@@ -19,13 +19,12 @@ ordenpCtrl.listar = async (req, res) => {
 
 ordenpCtrl.add = async (req, res) => {
     try {
-        const { ordenpedido, estadocompra, fechacreacion, fechadespacho, precio, totalpedido,cliente, usuario} = req.body
+        const { ordenpedido, estadocompra, fechacreacion, fechadespacho,  totalpedido,cliente, usuario} = req.body
         const newOrdenPedido = new ordenpModel({
             ordenpedido,
             estadocompra, 
             fechacreacion,
-            fechadespacho,
-            precio,
+            fechadespacho,           
             totalpedido,
             cliente,
             usuario
@@ -58,7 +57,6 @@ ordenpCtrl.update = async (req, res) => {
         const estadocompra = req.body.estadocompra || ordenp.estadocompra
         const fechacreacion = req.body.fechacreacion || ordenp.fechacreacion
         const fechadespacho = req.body.fechadespacho || ordenp.fechadespacho
-        const precio= req.body.precio || ordenp.precio
         const totalpedido = req.body.totalpedido || ordenp.totalpedido
         const cliente = req.body.cliente || ordenp.cliente
         const usuario = req.body.usuario || ordenp.usuario
@@ -68,7 +66,6 @@ ordenpCtrl.update = async (req, res) => {
             estadocompra, 
             fechacreacion,
             fechadespacho,
-            precio, 
             totalpedido,
             cliente,
             usuario

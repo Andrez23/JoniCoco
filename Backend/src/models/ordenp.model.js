@@ -17,10 +17,7 @@ const ordenSchema = new Schema({
     fechadespacho: {
         type: String,
     },
-    precio: {
-        type: Number,
-        
-    },
+  
     totalpedido: {
         type: Number,
         

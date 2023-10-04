@@ -11,7 +11,6 @@ const Ordenp = () => {
   const [estadocompra, setEstadocompra] = useState("");
   const [fechacreacion, setFechacreacion] = useState("");
   const [fechadespacho, setFechadespacho] = useState("");
-  const [precio, setPrecio] = useState("");
   const [totalpedido, setTotalpedido] = useState("");
 
   const [edit, setEdit] = useState(false);
@@ -27,7 +26,6 @@ const Ordenp = () => {
     setEstadocompra("");
     setFechacreacion("");
     setFechadespacho("");
-    setPrecio("");
     setTotalpedido("");
     setEdit(false);
   };
@@ -44,7 +42,6 @@ const Ordenp = () => {
         estadocompra,
         fechacreacion,
         fechadespacho,
-        precio,
         totalpedido,
       };
       await axios.post("http://localhost:4000/ordenp/add", newOrdenp);
@@ -77,7 +74,6 @@ const Ordenp = () => {
         estadocompra,
         fechacreacion,
         fechadespacho,
-        precio,
         totalpedido,
       };
       const { data } = await axios.put(
@@ -115,7 +111,6 @@ const Ordenp = () => {
     setOrdenpedido(item.ordenpedido);
     setFechacreacion(item.fechacreacion);
     setFechadespacho(item.fechadespacho);
-    setPrecio(item.precio);
     setTotalpedido(item.totalpedido);
     localStorage.setItem("id", item._id);
     setIsModalOpen(true);
@@ -159,8 +154,8 @@ const Ordenp = () => {
         <Breadcrumbs />
       </div>
       <div className="container-md mt-5">
-        <div className={`modal fade ${isModalOpen ? "show" : ""}`} id="staticBackdrop" 
-          data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" 
+        <div className={`modal fade ${isModalOpen ? "show" : ""}`} id="staticBackdrop"
+          data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1"
           aria-labelledby="staticBackdropLabel" aria-hidden={!isModalOpen} style={{ display: isModalOpen ? "block" : "none" }}
         >
           <div className="modal-dialog modal-lg">
@@ -242,20 +237,7 @@ const Ordenp = () => {
                       />
                     </div>
 
-                    <div className="col-md-6">
-                      <label htmlFor="inputEmail4" className="form-label">
-                        Precio{" "}
-                      </label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        value={precio}
-                        onChange={(e) =>
-                          setPrecio(e.target.value.toUpperCase())
-                        }
-                        required
-                      />
-                    </div>
+
 
                     <div className="col-md-6">
                       <label htmlFor="inputEmail4" className="form-label">
@@ -270,6 +252,38 @@ const Ordenp = () => {
                         }
                         required
                       />
+                    </div>
+                    <div>
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>Producto</th>
+                            <th>Valor Unitario</th>
+                            <th>Cantidad</th>
+                            <th>Valor Total</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Producto 1</td>
+                            <td>$10</td>
+                            <td>2</td>
+                            <td>$20</td>
+                          </tr>
+                          <tr>
+                            <td>Producto 2</td>
+                            <td>$15</td>
+                            <td>3</td>
+                            <td>$45</td>
+                          </tr>
+                          <tr>
+                            <td>Producto 3</td>
+                            <td>$12</td>
+                            <td>1</td>
+                            <td>$12</td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
 
                     <div className="modal-footer border-5">
@@ -292,6 +306,13 @@ const Ordenp = () => {
                   </div>
                 </form>
               </div>
+
+              {/*inicio de formulario detalle de pedido */}
+              <div className="modal-body">
+
+
+
+              </div>
             </div>
           </div>
         </div>
@@ -303,7 +324,7 @@ const Ordenp = () => {
           <h4 className="text-danger fw-bold m-0 mt-2 text-center">Orden de pedidos</h4>
           <div>
             <button
-              type="button" className="btn btn-danger rounded-circle mt-3"  onClick={() => {
+              type="button" className="btn btn-danger rounded-circle mt-3" onClick={() => {
                 setIsModalOpen(true);
               }}
               title="Haga clic para agregar un nuevo pedido"><i className="fa-solid fa-plus fa-beat "></i>
@@ -322,7 +343,6 @@ const Ordenp = () => {
                     <th scope="col" className="responsive-text">Estado compra</th>
                     <th scope="col" className="responsive-text">Fecha creacion</th>
                     <th scope="col" className="responsive-text">Fecha despacho</th>
-                    <th scope="col" className="responsive-text">Precio</th>
                     <th scope="col" className="responsive-text">Total pedido</th>
                     <th scope="col" className="responsive-text">Acciones</th>
                   </tr>
@@ -335,7 +355,6 @@ const Ordenp = () => {
                       <td className="responsive-text">{item.estadocompra}</td>
                       <td className="responsive-text">{item.fechacreacion}</td>
                       <td className="responsive-text">{item.fechadespacho}</td>
-                      <td className="responsive-text">{item.precio}</td>
                       <td className="responsive-text">{item.totalpedido}</td>
                       <td>
                         <div className="btn-group btn-group-sm" role="group">
@@ -372,8 +391,6 @@ const Ordenp = () => {
                       <strong>Fecha creacion:</strong> {item.fechacreacion}
                       <br />
                       <strong>Fecha despacho:</strong> {item.fechadespacho}
-                      <br />
-                      <strong>Precio:</strong> {item.precio}
                       <br />
                       <strong>Total pedido:</strong> {item.setTotalpedido}
                       <br />
