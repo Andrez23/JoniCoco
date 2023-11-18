@@ -61,30 +61,6 @@ const Footer = () => {
                       <i className="fa-brands fa-instagram fa-2xl"></i>
                     </Link>
                   </li>
-                  <li className="list-inline-item me-6">
-                    <Link
-                      to="https://www.instagram.com/panelitas.joni.coco/"
-                      className="link-light"
-                    >
-                      <i className="fa-brands fa-facebook fa-2xl"></i>
-                    </Link>
-                  </li>
-                  <li className="list-inline-item me-6">
-                    <Link
-                      to="https://www.instagram.com/panelitas.joni.coco/"
-                      className="link-light"
-                    >
-                      <i className="fa-brands fa-telegram fa-2xl"></i>
-                    </Link>
-                  </li>
-                  <li className="list-inline-item me-6">
-                    <Link
-                      to="https://www.instagram.com/panelitas.joni.coco/"
-                      className="link-light"
-                    >
-                      <i className="fa-brands fa-tiktok fa-2xl"></i>
-                    </Link>
-                  </li>
                 </ul>
                 <p className="copyright mb-0">Jonicoco © 2023</p>
               </div>

@@ -45,7 +45,7 @@ const Nosotros = () => {
       <div className="row justify-content-md-center">
         <h2 className="text-aligin-center mt-5 mb-4">NUESTRO EQUIPO</h2> 
         {/* Inicio Card1 */}
-        <div className="col-12 col-md-6 col-lg-3 mb-5 align-items-center mt-3">
+        <div className="col-12 col-md-6 col-lg-2 mb-5 align-items-center mt-3">
           <div className="card cardItem">
             <div className="content">
               <span></span>
@@ -80,7 +80,7 @@ const Nosotros = () => {
 
 
         {/*Inicio Card2 */}
-        <div className="col-12 col-md-6 col-lg-3 mb-5 align-items-center mt-3">
+        <div className="col-12 col-md-6 col-lg-2 mb-5 align-items-center mt-3">
           <div className="card cardItem">
             <div className="content">
               <span></span>
@@ -114,7 +114,7 @@ const Nosotros = () => {
         {/* Fin Card2 */}
 
         {/* Inicio Card3 */}
-        <div className="col-12 col-md-6 col-lg-3 mb-5 align-items-center mt-3">
+        <div className="col-12 col-md-6 col-lg-2 mb-5 align-items-center mt-3">
           <div className="card cardItem">
             <div className="content">
               <span></span>
@@ -148,7 +148,7 @@ const Nosotros = () => {
         {/* Fin Card3 */}
 
         {/* Inicio Card4 */}
-        <div className="col-12 col-md-6 col-lg-3 mb-5 align-items-center mt-3">
+        <div className="col-12 col-md-6 col-lg-2 mb-5 align-items-center mt-3">
           <div className="card cardItem">
             <div className="content">
               <span></span>

@@ -150,26 +150,38 @@ const Ordenp = () => {
 
   return (
     <div>
-      <div className=" container" style={{ textAlign: 'left' }}>
+      <div className=" container" style={{ textAlign: "left" }}>
         <Breadcrumbs />
       </div>
       <div className="container-md mt-5">
-        <div className={`modal fade ${isModalOpen ? "show" : ""}`} id="staticBackdrop"
-          data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1"
-          aria-labelledby="staticBackdropLabel" aria-hidden={!isModalOpen} style={{ display: isModalOpen ? "block" : "none" }}
+        <div
+          className={`modal fade ${isModalOpen ? "show" : ""}`}
+          id="staticBackdrop"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          tabIndex="-1"
+          aria-labelledby="staticBackdropLabel"
+          aria-hidden={!isModalOpen}
+          style={{ display: isModalOpen ? "block" : "none" }}
         >
           <div className="modal-dialog modal-lg">
             <div className="modal-content">
               <div
-                className="modal-header" style={{ backgroundColor: "#d84052" }}>
+                className="modal-header"
+                style={{ backgroundColor: "#d84052" }}
+              >
                 <h5 className="modal-title" id="staticBackdropLabel">
                   Registro de Ordenp
                 </h5>
-                <button type="button" className="btn-close bg-white" onClick={() => {
-                  cleanData(); // Limpia los campos del formulario
-                  getData(); // Carga los datos actualizados
-                  closeModal();
-                }} />
+                <button
+                  type="button"
+                  className="btn-close bg-white"
+                  onClick={() => {
+                    cleanData(); // Limpia los campos del formulario
+                    getData(); // Carga los datos actualizados
+                    closeModal();
+                  }}
+                />
               </div>
 
               <div className="modal-body">
@@ -187,9 +199,9 @@ const Ordenp = () => {
                         required
                       >
                         <option selected>selecione uno</option>
-                        <option>Activo</option>
-                        <option>En proceso</option>
-                        <option>finalizado</option>
+                        <option >Activo</option>
+                        <option >En proceso</option>
+                        <option >finalizado</option>
                       </select>
                     </div>
 
@@ -237,8 +249,6 @@ const Ordenp = () => {
                       />
                     </div>
 
-
-
                     <div className="col-md-6">
                       <label htmlFor="inputEmail4" className="form-label">
                         Total pedido{" "}
@@ -254,36 +264,38 @@ const Ordenp = () => {
                       />
                     </div>
                     <div>
-                      <table>
-                        <thead>
-                          <tr>
-                            <th>Producto</th>
-                            <th>Valor Unitario</th>
-                            <th>Cantidad</th>
-                            <th>Valor Total</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>Producto 1</td>
-                            <td>$10</td>
-                            <td>2</td>
-                            <td>$20</td>
-                          </tr>
-                          <tr>
-                            <td>Producto 2</td>
-                            <td>$15</td>
-                            <td>3</td>
-                            <td>$45</td>
-                          </tr>
-                          <tr>
-                            <td>Producto 3</td>
-                            <td>$12</td>
-                            <td>1</td>
-                            <td>$12</td>
-                          </tr>
-                        </tbody>
-                      </table>
+                      <div className="table-responsive mx-auto">
+                        <table className="table table-bordered table-hover">
+                          <thead style={{ backgroundColor: "#911625" }}>
+                            <tr>
+                              <th scope="col">Producto</th>
+                              <th scope="col">Valor Unitario</th>
+                              <th scope="col">Cantidad</th>
+                              <th scope="col">Valor Total</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Producto 1</td>
+                              <td>$10</td>
+                              <td>2</td>
+                              <td>$20</td>
+                            </tr>
+                            <tr>
+                              <td>Producto 2</td>
+                              <td>$15</td>
+                              <td>3</td>
+                              <td>$45</td>
+                            </tr>
+                            <tr>
+                              <td>Producto 3</td>
+                              <td>$12</td>
+                              <td>1</td>
+                              <td>$12</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
 
                     <div className="modal-footer border-5">
@@ -308,67 +320,92 @@ const Ordenp = () => {
               </div>
 
               {/*inicio de formulario detalle de pedido */}
-              <div className="modal-body">
-
-
-
-              </div>
+              <div className="modal-body"></div>
             </div>
           </div>
         </div>
       </div>
 
       {/*Inicio de la tabla */}
-      <div className='container container-flex card Larger shadow p-0 mb-15 bg-body rounded'>
-        <div className='container'>
-          <h4 className="text-danger fw-bold m-0 mt-2 text-center">Orden de pedidos</h4>
+      <div className="container container-flex card Larger shadow p-0 mb-15 bg-body rounded">
+        <div className="container">
+          <h4 className="text-danger fw-bold m-0 mt-2 text-center">
+            Orden de pedidos
+          </h4>
           <div>
             <button
-              type="button" className="btn btn-danger rounded-circle mt-3" onClick={() => {
+              type="button"
+              className="btn btn-danger rounded-circle mt-3"
+              onClick={() => {
                 setIsModalOpen(true);
               }}
-              title="Haga clic para agregar un nuevo pedido"><i className="fa-solid fa-plus fa-beat "></i>
+              title="Haga clic para agregar un nuevo pedido"
+            >
+              <i className="fa-solid fa-plus fa-beat "></i>
             </button>
           </div>
         </div>
         <div className="card-header d-flex justify-content-between align-items-center">
-
-          <div className='container-fluid d-flex d-none d-md-block '>
+          <div className="container-fluid d-flex d-none d-md-block ">
             <div className="container container-fluid table-responsive">
-              <table className='table table-bordered table-hover mt-2'>
-                <thead className='table-danger'>
+              <table className="table table-bordered table-hover mt-2">
+                <thead className="table-danger">
                   <tr>
-                    <th scope="col" className="responsive-text">#</th>
-                    <th scope="col" className="responsive-text">Orden pedido</th>
-                    <th scope="col" className="responsive-text">Estado compra</th>
-                    <th scope="col" className="responsive-text">Fecha creacion</th>
-                    <th scope="col" className="responsive-text">Fecha despacho</th>
-                    <th scope="col" className="responsive-text">Total pedido</th>
-                    <th scope="col" className="responsive-text">Acciones</th>
+                    <th scope="col" className="responsive-text">
+                      #
+                    </th>
+                    <th scope="col" className="responsive-text">
+                      Orden pedido
+                    </th>
+                    <th scope="col" className="responsive-text">
+                      Estado compra
+                    </th>
+                    <th scope="col" className="responsive-text">
+                      Fecha creacion
+                    </th>
+                    <th scope="col" className="responsive-text">
+                      Fecha despacho
+                    </th>
+                    <th scope="col" className="responsive-text">
+                      Total pedido
+                    </th>
+                    <th scope="col" className="responsive-text">
+                      Acciones
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
-                  {Array.isArray(ordenp) && ordenp.map((item, i) => (
-                    <tr key={item._id}>
-                      <td className="responsive-text ">{i + 1}</td>
-                      <td className="responsive-text">{item.ordenpedido}</td>
-                      <td className="responsive-text">{item.estadocompra}</td>
-                      <td className="responsive-text">{item.fechacreacion}</td>
-                      <td className="responsive-text">{item.fechadespacho}</td>
-                      <td className="responsive-text">{item.totalpedido}</td>
-                      <td>
-                        <div className="btn-group btn-group-sm" role="group">
-                          <span className="btn btn-primary d-flex align-items-center me-2"
-                            onClick={() => editData(item)}><i className="fa-solid fa-pencil space-i"></i>
-                          </span>
-                          <span
-                            className="btn btn-danger d-flex align-items-center"
-                            onClick={() => deleteOrdenp(item._id)}><i className="fa-solid fa-trash"></i>
-                          </span>
-                        </div>
-                      </td>
-                    </tr>
-                  ))}
+                  {Array.isArray(ordenp) &&
+                    ordenp.map((item, i) => (
+                      <tr key={item._id}>
+                        <td className="responsive-text ">{i + 1}</td>
+                        <td className="responsive-text">{item.ordenpedido}</td>
+                        <td className="responsive-text">{item.estadocompra}</td>
+                        <td className="responsive-text">
+                          {item.fechacreacion}
+                        </td>
+                        <td className="responsive-text">
+                          {item.fechadespacho}
+                        </td>
+                        <td className="responsive-text">{item.totalpedido}</td>
+                        <td>
+                          <div className="btn-group btn-group-sm" role="group">
+                            <span
+                              className="btn btn-primary d-flex align-items-center me-2"
+                              onClick={() => editData(item)}
+                            >
+                              <i className="fa-solid fa-pencil space-i"></i>
+                            </span>
+                            <span
+                              className="btn btn-danger d-flex align-items-center"
+                              onClick={() => deleteOrdenp(item._id)}
+                            >
+                              <i className="fa-solid fa-trash"></i>
+                            </span>
+                          </div>
+                        </td>
+                      </tr>
+                    ))}
                 </tbody>
               </table>
             </div>
@@ -381,7 +418,7 @@ const Ordenp = () => {
               ordenp.map((item, i) => (
                 <div key={item._id} className="card border-3 mt-3">
                   {/* Contenido de la tarjeta */}
-                  <div className='card-body'>
+                  <div className="card-body">
                     <h5 className="card-title">Ordenp {i + 1}</h5>
                     <p className="card-text">
                       <strong>Orden pedido:</strong> {item.ordenpedido}
@@ -415,7 +452,7 @@ const Ordenp = () => {
           </div>
         </div>
       </div>
-    </div >
+    </div>
   );
 };
 

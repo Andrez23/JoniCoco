@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "../Components/Footer";
 import EditJoniCoco3 from "../images/EditJoniCoco3 - banner.png";
-
+import { Link } from "react-router-dom";
 import Bolsita from "../images/bolsitadetal.jpg";
 import Cajita6unidades from "../images/cajita6unidades.jpg";
 import Tarrito10unidades from "../images/tarro10unidades.jpg";
@@ -44,7 +44,7 @@ const Home = () => {
                         <hr />
                         <h3><span style={{ color: "#911625" }}>Caja por 6 unidades  :</span> </h3>
                       </p>
-                      <button className="leerMas">Mas información</button>
+                      <Link to="tienda" className="leerMas mt-4">Mas información</Link>
                     </div>
                   </div>
                 </div>
@@ -68,7 +68,7 @@ const Home = () => {
                         <hr />
                         <h3 style={{ color: "black" }}><span style={{ color: "#fff" }}>Al detal</span> </h3>
                       </p>
-                      <button className="leerMas mt-4">Mas información</button>
+                      <Link to="tienda" className="leerMas mt-4">Mas información</Link>
                     </div>
                   </div>
                 </div>
@@ -111,7 +111,7 @@ const Home = () => {
                         <hr />
                         <h3 ><span style={{ color: "#911625" }}>Tarrito pequeño por 5 unidades:</span> </h3>
                       </p>
-                      <button className="leerMas">Mas información</button>
+                      <Link to="tienda" className="leerMas mt-4">Mas información</Link>
                     </div>
                   </div>
                 </div>
@@ -130,7 +130,7 @@ const Home = () => {
                         <hr />
                         <h3 ><span style={{ color: "#911625" }}>Tarrito grande por 10 unidades:</span> </h3>
                       </p>
-                      <button className="leerMas">Mas información</button>
+                      <Link to="tienda" className="leerMas mt-4">Mas información</Link>
                     </div>
                   </div>
                 </div>
